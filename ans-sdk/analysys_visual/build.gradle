@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply from: "../maven.gradle"
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../proguard-base.pro','proguard-custom.pro','proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.sourceJavaVersion
+        targetCompatibility rootProject.ext.targetJavaVersion
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+}
+
+dependencies {
+    if(apidemo_nomix.toBoolean()){
+        compileOnly project(':analysys_core')
+    } else {
+        compileOnly 'cn.com.analysys:analysys-core:latest.release'
+    }
+
+}

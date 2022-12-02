@@ -1,0 +1,77 @@
+com.analysys.allgro.AllegroUtils -> com.analysys.allgro.a:
+    42:53:java.lang.String getViewIdResourceName(android.view.View) -> a
+    69:77:java.lang.String getIdResourceName(int) -> a
+    133:134:boolean isPage(java.lang.Object) -> a
+    142:163:boolean isFragment(java.lang.Object) -> b
+    174:254:java.util.Map getPageInfo(java.lang.Object,boolean) -> a
+    258:258:android.app.Activity getCurAc() -> a
+    266:295:java.lang.Object getPageObjFromView(android.view.View) -> b
+    299:321:java.lang.Object getFragmetByView(android.view.View) -> d
+    325:332:boolean isBelongToView(android.view.View,android.view.View) -> a
+    341:346:java.lang.Object getParentFragment(java.lang.Object) -> c
+    357:388:java.lang.String getActivityTitle(android.app.Activity) -> a
+    394:431:java.lang.String getToolbarTitle(android.app.Activity) -> b
+    435:441:java.lang.Class compatActivity() -> b
+    497:517:java.lang.String getPageUrl(java.lang.Object) -> d
+    527:550:android.app.Activity getActivityFromFragment(java.lang.Object) -> e
+    554:562:android.app.Activity getActivityFromDialog(android.app.Dialog) -> a
+    569:572:android.app.Activity getActivityFromView(android.view.View) -> c
+    579:591:android.app.Activity getActivityFromContext(android.content.Context) -> a
+    599:607:android.app.Dialog getDialogFromView(android.view.View) -> e
+com.analysys.allgro.AnalysysProbe -> com.analysys.allgro.AnalysysProbe:
+    13:13:void <init>() -> <init>
+    16:18:void init() -> init
+com.analysys.allgro.R -> com.analysys.allgro.R:
+    10:10:void <init>() -> <init>
+com.analysys.allgro.R$id -> com.analysys.allgro.R$id:
+    int analysys_tag_view_id -> analysys_tag_view_id
+    13:13:void <init>() -> <init>
+    15:15:void <clinit>() -> <clinit>
+com.analysys.allgro.R$string -> com.analysys.allgro.R$string:
+    int app_name -> app_name
+    18:18:void <init>() -> <init>
+    20:20:void <clinit>() -> <clinit>
+com.analysys.allgro.annotations.AnalysysIgnorePage -> com.analysys.allgro.annotations.AnalysysIgnorePage:
+com.analysys.allgro.annotations.AnalysysIgnoreTrackClick -> com.analysys.allgro.annotations.AnalysysIgnoreTrackClick:
+com.analysys.allgro.plugin.PageViewProbe -> com.analysys.allgro.plugin.PageViewProbe:
+    java.util.Map mShowFragment -> mShowFragment
+    int mFragmentPageCloseHashcode -> mFragmentPageCloseHashcode
+    long mFragmentPageCloseTime -> mFragmentPageCloseTime
+    int mFragmentPageViewHashcode -> mFragmentPageViewHashcode
+    long mFragmentPageViewTime -> mFragmentPageViewTime
+    22:26:void <init>() -> <init>
+    52:52:void onFragmentViewCreated(java.lang.Object,android.view.View,android.os.Bundle,boolean) -> onFragmentViewCreated
+    63:84:void trackFragmentResume(java.lang.Object,boolean,long) -> trackFragmentResume
+    89:101:void trackFragmentPause(java.lang.Object,boolean,long) -> trackFragmentPause
+    108:113:void trackFragmentSetUserVisibleHint(java.lang.Object,boolean,boolean,long) -> trackFragmentSetUserVisibleHint
+    117:147:void trackFragmentSetUserVisibleHintTrue(java.lang.Object,boolean,boolean,long) -> trackFragmentSetUserVisibleHintTrue
+    151:162:void trackFragmentSetUserVisibleHintFalse(java.lang.Object,boolean,boolean,long) -> trackFragmentSetUserVisibleHintFalse
+    169:174:void trackOnHiddenChanged(java.lang.Object,boolean,boolean,long) -> trackOnHiddenChanged
+    178:208:void trackOnHiddenChangedTrue(java.lang.Object,boolean,boolean,long) -> trackOnHiddenChangedTrue
+    212:223:void trackOnHiddenChangedFalse(java.lang.Object,boolean,boolean,long) -> trackOnHiddenChangedFalse
+    226:230:boolean fragmentGetUserVisibleHint(java.lang.Object) -> fragmentGetUserVisibleHint
+    234:239:boolean fragmentIsShow(java.lang.Object) -> fragmentIsShow
+    244:248:boolean fragmentIsResumed(java.lang.Object) -> fragmentIsResumed
+    255:271:boolean isNotFragment(java.lang.Object) -> isNotFragment
+    278:295:void autoTrackFragmentPageClose(java.lang.Object,boolean,long) -> autoTrackFragmentPageClose
+    302:313:boolean checkPageCloseTime(java.lang.Object,long) -> checkPageCloseTime
+    317:340:void autoTrackFragmentPageView(java.lang.Object,boolean,long) -> autoTrackFragmentPageView
+    347:358:boolean checkPageViewTime(java.lang.Object,long) -> checkPageViewTime
+    394:405:boolean checkFragmentPVEnable(java.lang.Object,boolean) -> checkFragmentPVEnable
+    415:418:boolean checkFragmentPCEnable(java.lang.Object,boolean) -> checkFragmentPCEnable
+com.analysys.allgro.plugin.ViewClickProbe -> com.analysys.allgro.plugin.ViewClickProbe:
+    36:36:void <init>() -> <init>
+    41:48:void trackMenuItem(android.view.MenuItem,boolean,long) -> trackMenuItem
+    53:80:void trackMenuItem(java.lang.Object,android.view.MenuItem,boolean,long) -> trackMenuItem
+    85:143:void trackTabLayout(java.lang.Object,java.lang.Object,boolean,long) -> trackTabLayout
+    149:169:void trackTabHost(java.lang.String,boolean,long) -> trackTabHost
+    175:294:void trackDialog(android.content.DialogInterface,int,boolean,long) -> trackDialog
+    299:311:void trackDrawerSwitch(android.view.View,boolean,boolean,long) -> trackDrawerSwitch
+    317:337:void trackRadioGroup(android.widget.RadioGroup,int,boolean,long) -> trackRadioGroup
+    342:368:void trackListView(android.widget.AdapterView,android.view.View,int,boolean,long) -> trackListView
+    374:398:void trackExpListViewChildClick(android.widget.ExpandableListView,android.view.View,int,int,boolean,long) -> trackExpListViewChildClick
+    403:427:void trackExpListViewGroupClick(android.widget.ExpandableListView,android.view.View,int,boolean,long) -> trackExpListViewGroupClick
+    433:458:void trackViewOnClick(android.view.View,boolean,long) -> trackViewOnClick
+    461:472:void autoTrackClick(java.lang.Object,java.util.Map,boolean,long) -> autoTrackClick
+    485:506:boolean checkTrackClickEnable(java.lang.Object,java.lang.Object,boolean) -> checkTrackClickEnable
+    510:510:boolean isTrackClickSwitchClose() -> isTrackClickSwitchClose

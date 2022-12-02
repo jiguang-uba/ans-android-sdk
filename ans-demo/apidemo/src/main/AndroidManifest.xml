@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.analysys.apidemo"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.analysys.demo.AnsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AppCompat.Light"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute">
+
+        <activity android:name="com.analysys.demo.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.analysys.demo.TrackActivity" />
+        <activity android:name="com.analysys.demo.ProbeClickTestActivity" />
+        <activity android:name="com.analysys.demo.VisualPositionBindActivity" />
+        <activity android:name="com.analysys.demo.VisualHybridActivity" />
+        <activity android:name="com.analysys.demo.VisualSibGridViewActivity" />
+        <activity android:name="com.analysys.demo.VisualSibViewPagerActivity" />
+        <activity android:name="com.analysys.demo.VisualRelatedActivity" />
+        <activity android:name="com.analysys.demo.VisualSibRecyclerViewActivity" />
+        <activity android:name="com.analysys.demo.VisualSibListViewActivity" />
+        <activity android:name="com.analysys.demo.VisualCrossPagesActivity" />
+        <activity android:name="com.analysys.demo.VisualClassBindActivity" />
+        <activity android:name="com.analysys.demo.VisualTextBindActivity" />
+        <activity android:name="com.analysys.demo.VisualBaseControlActivity" />
+        <activity android:name="com.analysys.demo.HeatMapTestActivity" />
+        <activity android:name="com.analysys.demo.ProbeFragmentTestActivity" />
+        <activity android:name="com.analysys.demo.PageViewTestActivity" />
+        <activity android:name="com.analysys.demo.ModifyConfigActivity" />
+        <activity android:name="com.analysys.demo.PageViewActivity" />
+        <activity android:name="com.analysys.demo.OtherActivity" />
+        <activity android:name="com.analysys.demo.VisualActivity" />
+        <activity android:name="com.analysys.demo.PropertyActivity" />
+        <activity android:name="com.analysys.demo.HeatMapActivity" />
+        <activity android:name="com.analysys.demo.ProbeActivity" />
+        <activity android:name="com.analysys.demo.HybridActivity" />
+        <activity android:name="com.analysys.demo.UserInfoActivity" />
+        <activity
+            android:name="com.analysys.demo.Process1Activity"
+            android:process=":process1" />
+        <activity
+            android:name="com.analysys.demo.Process2Activity"
+            android:process=":process2" />
+
+        <meta-data
+            android:name="ANALYSYS_AUTO_COLLECTION_MAC"
+            android:value="false"/>
+        <meta-data
+            android:name="ANALYSYS_AUTO_COLLECTION_IMEI"
+            android:value="false"/>
+
+<!--        <meta-data-->
+<!--            android:name="ANALYSYS_KEYSTONE"-->
+<!--            android:value="analysys.crt"/>-->
+    </application>
+
+</manifest>

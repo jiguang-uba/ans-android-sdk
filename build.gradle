@@ -1,0 +1,65 @@
+// 这里的apply是为了让子模块使用
+apply from: "config.gradle"
+buildscript {
+    repositories {
+        google()
+
+        maven {
+            url '/Users/person/develop/temp/repo/'
+        }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+//        jcenter { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        // root下build.gradle使用
+        apply from: "config.gradle"
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'cn.com.analysys:analysys-allgro-plugin:1.1.3'
+    }
+    subprojects {
+        project.configurations.all {
+            resolutionStrategy.eachDependency { details ->
+                if (details.requested.group == 'com.android.support'
+                        && !details.requested.name.contains('multidex') ) {
+                    details.useVersion "27.1.1"
+                }
+                if (details.requested.group == 'androidx.core'
+                        && !details.requested.name.contains('androidx') ) {
+                    details.useVersion "1.0.1"
+                }
+            }
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url '/Users/person/develop/temp/repo/'
+        }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+//        jcenter { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        jcenter()
+        maven { url 'http://mvn.gt.igexin.com/nexus/content/repositories/releases/' }
+//        maven {
+//    credentials {
+//        username '619b6ed6dd32cb644499de8d'
+//        password 'e69fi96c5UF8'
+//    }
+//    url 'https://packages.aliyun.com/maven/repository/2158329-release-3aNbLH/'
+//}
+    }
+}
+
+//项目根目录build.gradle文件allprojects块添加：
+//maven {
+//    credentials {
+//        username '619b6ed6dd32cb644499de8d'
+//        password 'e69fi96c5UF8'
+//    }
+//    url 'https://packages.aliyun.com/maven/repository/2158329-release-3aNbLH/'
+//}

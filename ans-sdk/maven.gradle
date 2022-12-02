@@ -1,0 +1,175 @@
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+
+def maven_version = rootProject.ext.version
+def maven_groupId = 'cn.com.analysys'
+
+//下面的version和group必须有，gradle打包的pom文件依赖这个版本号和group
+version = rootProject.ext.version
+group = maven_groupId
+
+def maven_artifactId = project.name
+if(project.name.equals("analysys_allgro")){
+    maven_artifactId = "analysys-allgro"
+} else if(project.name.equals("analysys_arkanalysys")){
+    maven_artifactId = "analysys-arkanalysys"
+}else if(project.name.equals("analysys_core")){
+    maven_artifactId = "analysys-core"
+}else if(project.name.equals("analysys_encryption")) {
+    maven_artifactId = "analysys-encrypt"
+}else if(project.name.equals("analysys_push")) {
+    maven_artifactId = "analysys-push"
+}else if(project.name.equals("analysys_visual")) {
+    maven_artifactId = "analysys-visual"
+}else if(project.name.equals("analysys_mpaas")) {
+    maven_artifactId = "analysys-mpaas"
+}else if(project.name.equals("analysys_react_native")) {
+    maven_artifactId = "analysys-react-native"
+}else if(project.name.equals("analysys_arkanalysys_no_op")) {
+    maven_artifactId = "analysys-arkanalysys-no-op"
+}
+
+// local reposity
+uploadArchives {
+    repositories {
+        mavenDeployer {
+
+            repository(url: uri('../../../repo'))
+
+            pom.project {
+                name maven_artifactId
+                groupId maven_groupId
+                artifactId maven_artifactId
+                version maven_version
+                packaging 'aar'
+            }
+        }
+    }
+}
+
+// custom reposity
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+//            repository(url: 'https://packages.aliyun.com/maven/repository/2158329-release-3aNbLH/') {
+//                authentication(
+//                        userName: '619b47f5fc1ed3a24354651f',
+//                        password: 'xDLjX5q9kCqC'
+//                )
+//            }
+//            snapshotRepository(url: 'https://packages.aliyun.com/maven/repository/2158329-snapshot-TNYnd7/') {
+//                authentication(
+//                        userName: '619b47f5fc1ed3a24354651f',
+//                        password: 'xDLjX5q9kCqC'
+//                )
+//            }
+//
+//            pom.project {
+//                name maven_artifactId
+//                groupId maven_groupId
+//                artifactId maven_artifactId
+//                version maven_version
+//                packaging 'aar'
+//                url 'https://github.com/analysys/ans-android-sdk'
+//                description maven_artifactId
+//                licenses {
+//                    license {
+//                        name 'The Apache Software License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        name 'analysys'
+//                        email 'analysys@analysys.com.cn'
+//                        url 'https://ark.analysys.cn'
+//                    }
+//                }
+//
+//                scm {
+//                    connection 'https://github.com/analysys/ans-android-sdk'
+//                    developerConnection 'https://github.com/analysys/ans-android-sdk'
+//                    url 'https://github.com/analysys/ans-android-sdk'
+//                }
+//            }
+//        }
+//    }
+//}
+
+// central reposity
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+//            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2") {
+//                authentication(userName: maven_username, password: maven_userpassword)
+//            }
+//
+//
+//            pom.project {
+//                name maven_artifactId
+//                groupId maven_groupId
+//                artifactId maven_artifactId
+//                version maven_version
+//                packaging 'aar'
+//                url 'https://github.com/analysys/ans-android-sdk'
+//                description maven_artifactId
+//                licenses {
+//                    license {
+//                        name 'The Apache Software License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        name 'analysys'
+//                        email 'analysys@analysys.com.cn'
+//                        url 'https://ark.analysys.cn'
+//                    }
+//                }
+//
+//                scm {
+//                    connection 'https://github.com/analysys/ans-android-sdk'
+//                    developerConnection 'https://github.com/analysys/ans-android-sdk'
+//                    url 'https://github.com/analysys/ans-android-sdk'
+//                }
+//            }
+//        }
+//
+//
+//    }
+//}
+
+// 进行数字签名
+signing {
+    required { gradle.taskGraph.hasTask("uploadArchives") }
+    sign configurations.archives
+}
+
+
+task androidJavadocs(type: Javadoc) {
+    // 设置源码所在的位置
+    source = android.sourceSets.main.java.sourceFiles
+}
+
+// 生成javadoc.jar
+task androidJavadocsJar(type: Jar) {
+    // 指定文档名称
+    classifier = 'javadoc'
+    from androidJavadocs.destinationDir
+}
+
+// 生成sources.jar
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+
+// 产生相关配置文件的任务
+artifacts {
+    archives androidSourcesJar
+    archives androidJavadocsJar
+}

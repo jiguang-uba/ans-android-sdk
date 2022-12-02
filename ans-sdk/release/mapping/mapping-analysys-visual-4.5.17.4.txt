@@ -1,0 +1,1156 @@
+com.analysys.visual.R -> com.analysys.visual.R:
+    10:10:void <init>() -> <init>
+com.analysys.visual.R$string -> com.analysys.visual.R$string:
+    int app_name -> app_name
+    13:13:void <init>() -> <init>
+    15:15:void <clinit>() -> <clinit>
+com.analysys.visual.VisualAgent -> com.analysys.visual.VisualAgent:
+    25:25:void <init>() -> <init>
+    35:35:void setVisualBaseURL(android.content.Context,java.lang.String) -> setVisualBaseURL
+    42:71:void setVisitorDebugURL(android.content.Context,java.lang.String) -> setVisitorDebugURL
+    78:95:java.lang.String getParams(android.content.Context) -> getParams
+    105:136:void setVisitorConfigURL(android.content.Context,java.lang.String) -> setVisitorConfigURL
+    163:168:void waitNetAvailable(android.content.Context,java.lang.String) -> waitNetAvailable
+    172:178:void loadConfigFromServer(java.lang.String) -> loadConfigFromServer
+    25:25:void access$000(java.lang.String) -> access$000
+com.analysys.visual.VisualAgent$1 -> com.analysys.visual.VisualAgent$1:
+    java.lang.String val$url -> a
+    172:172:void <init>(java.lang.String) -> <init>
+    175:176:void run() -> run
+com.analysys.visual.VisualAgent$NetReceiver -> com.analysys.visual.VisualAgent$a:
+    java.lang.String url -> a
+    142:144:void <init>(java.lang.String) -> <init>
+    149:157:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.analysys.visual.VisualManager -> com.analysys.visual.a:
+    com.analysys.visual.VisualManager instance -> a
+    java.lang.String mUrl -> b
+    com.analysys.visual.conn.ConnManager mConnManager -> c
+    android.os.Handler mThreadHandler -> d
+    android.util.SparseArray mCmdImplArray -> e
+    boolean isStarted -> f
+    52:53:void <init>() -> <init>
+    56:63:com.analysys.visual.VisualManager getInstance() -> a
+    67:67:java.lang.String getUrl() -> b
+    77:77:boolean isStarted() -> c
+    81:131:void start(java.lang.String) -> a
+    134:145:void feedbackEvent(java.lang.String,java.lang.String,java.util.Map) -> a
+    151:161:void handleEditorClosed() -> d
+    29:29:com.analysys.visual.conn.ConnManager access$000(com.analysys.visual.VisualManager) -> a
+    29:29:java.lang.String access$100(com.analysys.visual.VisualManager) -> b
+    29:29:void access$200(com.analysys.visual.VisualManager) -> c
+    29:29:android.util.SparseArray access$300(com.analysys.visual.VisualManager) -> d
+com.analysys.visual.VisualManager$1 -> com.analysys.visual.a$1:
+    com.analysys.visual.VisualManager this$0 -> a
+    91:91:void <init>(com.analysys.visual.VisualManager,android.os.Looper) -> <init>
+    95:119:void handleMessage(android.os.Message) -> handleMessage
+com.analysys.visual.bind.VisualASMListener -> com.analysys.visual.bind.VisualASMListener:
+    14:14:void <init>() -> <init>
+    18:28:void trackSendAccessibilityEvent(android.view.View,int,boolean) -> trackSendAccessibilityEvent
+com.analysys.visual.bind.VisualASMListener$1 -> com.analysys.visual.bind.VisualASMListener$1:
+    android.view.View val$view -> a
+    int val$eventType -> b
+    com.analysys.visual.bind.VisualASMListener this$0 -> c
+    18:18:void <init>(com.analysys.visual.bind.VisualASMListener,android.view.View,int) -> <init>
+    22:26:void run() -> run
+com.analysys.visual.bind.VisualBindManager -> com.analysys.visual.bind.VisualBindManager:
+    java.lang.String TAG -> TAG
+    com.analysys.visual.bind.VisualBindManager INSTANCE -> INSTANCE
+    boolean isEditing -> isEditing
+    java.util.List EMPTY -> EMPTY
+    java.util.List mListRootView -> mListRootView
+    boolean mInited -> mInited
+    com.analysys.utils.ActivityLifecycleUtils$BaseLifecycleCallback mLifecycleCallback -> mLifecycleCallback
+    java.util.List mListBindRunnable -> mListBindRunnable
+    int REBIND_ROOT_VIEW_INTERVAL -> REBIND_ROOT_VIEW_INTERVAL
+    int MSG_REFRESH_ROOT_VIEWS -> MSG_REFRESH_ROOT_VIEWS
+    int REFRESH_ROOT_VIEWS_INTERVAL -> REFRESH_ROOT_VIEWS_INTERVAL
+    android.os.Handler mMainHandler -> mMainHandler
+    android.os.Handler mHandler -> mHandler
+    android.os.HandlerThread mWorkThread -> mWorkThread
+    java.util.List mListEvent -> mListEvent
+    java.lang.String METHOD_GET -> METHOD_GET
+    int TIME_OUT_SEC -> TIME_OUT_SEC
+    java.lang.String SHARED_PREF_EDITS_FILE -> SHARED_PREF_EDITS_FILE
+    java.lang.String SHARED_PREF_BINDINGS_KEY -> SHARED_PREF_BINDINGS_KEY
+    org.json.JSONArray mJAEditEvent -> mJAEditEvent
+    71:71:com.analysys.visual.bind.VisualBindManager getInstance() -> getInstance
+    68:765:void <init>() -> <init>
+    89:122:void init() -> init
+    130:140:boolean hookWM() -> hookWM
+    147:147:boolean isEditing() -> isEditing
+    156:165:void setEditing(boolean) -> setEditing
+    168:171:void postRunnableAtFrontOfQueue(java.lang.Runnable) -> postRunnableAtFrontOfQueue
+    238:270:void newAccessibilityEvent(android.view.View,int,boolean) -> newAccessibilityEvent
+    277:302:void refreshRootViews() -> refreshRootViews
+    308:359:void unBindRootView(com.analysys.ui.RootView) -> unBindRootView
+    375:385:void requestUnbindRootView(com.analysys.ui.RootView) -> requestUnbindRootView
+    388:405:void rebindCurrentActivityView() -> rebindCurrentActivityView
+    408:418:void requestReBindRootView(com.analysys.ui.RootView) -> requestReBindRootView
+    427:487:void reBindRootView(com.analysys.ui.RootView) -> reBindRootView
+    572:586:void handleMessageImpl(android.os.Message) -> handleMessageImpl
+    589:594:void changeToMainHandler() -> changeToMainHandler
+    614:626:void loadConfigFromLocal() -> loadConfigFromLocal
+    633:638:void saveConfig(java.lang.String) -> saveConfig
+    649:699:boolean loadConfigFromServer(java.lang.String) -> loadConfigFromServer
+    703:714:void showConfigureDataLog(org.json.JSONArray) -> showConfigureDataLog
+    720:720:android.content.SharedPreferences getSharedPreferences() -> getSharedPreferences
+    727:746:void refreshEvents(java.lang.String) -> refreshEvents
+    752:763:void updateEventsEditing(java.lang.String) -> updateEventsEditing
+    768:768:org.json.JSONArray getJAEditEvent() -> getJAEditEvent
+    776:799:void mergeEventsEditing(java.lang.String,org.json.JSONArray) -> mergeEventsEditing
+    802:829:void doMergeEventList(java.util.List,java.util.List,org.json.JSONArray,org.json.JSONArray) -> doMergeEventList
+    835:835:boolean isEventEmpty() -> isEventEmpty
+    842:853:java.lang.String getHybridEventList() -> getHybridEventList
+    860:866:java.lang.String getNativeProperty(java.lang.Object,java.lang.String) -> getNativeProperty
+    873:873:java.util.List getEventList() -> getEventList
+    880:944:void setEventList(java.util.List) -> setEventList
+    947:949:void report(com.analysys.visual.bind.event.impl.BaseEvent) -> report
+    953:973:void reportHybrid(java.lang.String,java.lang.String,java.lang.String) -> reportHybrid
+    60:60:void access$000(com.analysys.visual.bind.VisualBindManager,android.os.Message) -> access$000
+    60:60:void access$100(com.analysys.visual.bind.VisualBindManager) -> access$100
+    60:60:void access$200(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView) -> access$200
+    60:60:void access$300(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView) -> access$300
+    60:60:void access$500(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView) -> access$500
+    60:60:void access$600(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView) -> access$600
+    60:60:java.util.List access$700(com.analysys.visual.bind.VisualBindManager) -> access$700
+    60:60:void access$800(com.analysys.visual.bind.VisualBindManager) -> access$800
+    60:60:java.util.List access$900(com.analysys.visual.bind.VisualBindManager) -> access$900
+    60:60:android.os.Handler access$1000(com.analysys.visual.bind.VisualBindManager) -> access$1000
+    60:60:java.util.List access$1100(com.analysys.visual.bind.VisualBindManager) -> access$1100
+    60:60:java.util.List access$1200(com.analysys.visual.bind.VisualBindManager) -> access$1200
+    64:64:void <clinit>() -> <clinit>
+com.analysys.visual.bind.VisualBindManager$1 -> com.analysys.visual.bind.VisualBindManager$1:
+    com.analysys.visual.bind.VisualBindManager this$0 -> a
+    92:92:void <init>(com.analysys.visual.bind.VisualBindManager,android.os.Looper) -> <init>
+    95:96:void handleMessage(android.os.Message) -> handleMessage
+com.analysys.visual.bind.VisualBindManager$10 -> com.analysys.visual.bind.VisualBindManager$2:
+    java.util.List val$listEventExists -> a
+    com.analysys.visual.bind.VisualBindManager this$0 -> b
+    900:900:void <init>(com.analysys.visual.bind.VisualBindManager,java.util.List) -> <init>
+    905:941:void run() -> run
+com.analysys.visual.bind.VisualBindManager$2 -> com.analysys.visual.bind.VisualBindManager$3:
+    com.analysys.visual.bind.VisualBindManager this$0 -> a
+    112:112:void <init>(com.analysys.visual.bind.VisualBindManager) -> <init>
+    116:120:void run() -> run
+com.analysys.visual.bind.VisualBindManager$3 -> com.analysys.visual.bind.VisualBindManager$4:
+    com.analysys.visual.bind.VisualBindManager this$0 -> a
+    209:209:void <init>(com.analysys.visual.bind.VisualBindManager) -> <init>
+    213:220:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
+    224:231:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
+com.analysys.visual.bind.VisualBindManager$4 -> com.analysys.visual.bind.VisualBindManager$5:
+    com.analysys.ui.RootView val$rootView -> a
+    com.analysys.visual.bind.VisualBindManager this$0 -> b
+    375:375:void <init>(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView) -> <init>
+    379:383:void run() -> run
+com.analysys.visual.bind.VisualBindManager$5 -> com.analysys.visual.bind.VisualBindManager$6:
+    com.analysys.ui.RootView val$rootView -> a
+    com.analysys.visual.bind.VisualBindManager this$0 -> b
+    408:408:void <init>(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView) -> <init>
+    412:416:void run() -> run
+com.analysys.visual.bind.VisualBindManager$6 -> com.analysys.visual.bind.VisualBindManager$7:
+    com.analysys.ui.RootView val$rootView -> a
+    com.analysys.visual.bind.VisualBindManager this$0 -> b
+    431:431:void <init>(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView) -> <init>
+    434:439:void onGlobalLayout() -> onGlobalLayout
+com.analysys.visual.bind.VisualBindManager$7 -> com.analysys.visual.bind.VisualBindManager$8:
+    com.analysys.ui.RootView val$rootView -> a
+    com.analysys.visual.bind.VisualBindManager this$0 -> b
+    444:444:void <init>(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView) -> <init>
+    447:448:void onScrollChanged() -> onScrollChanged
+com.analysys.visual.bind.VisualBindManager$8 -> com.analysys.visual.bind.VisualBindManager$9:
+    com.analysys.visual.bind.VisualBindManager this$0 -> a
+    559:559:void <init>(com.analysys.visual.bind.VisualBindManager,android.os.Looper) -> <init>
+    563:564:void handleMessage(android.os.Message) -> handleMessage
+com.analysys.visual.bind.VisualBindManager$9 -> com.analysys.visual.bind.VisualBindManager$10:
+    java.lang.String val$strUrl -> a
+    com.analysys.visual.bind.VisualBindManager this$0 -> b
+    655:655:void <init>(com.analysys.visual.bind.VisualBindManager,java.lang.String) -> <init>
+    658:658:boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+com.analysys.visual.bind.VisualBindManager$DelayBindRunnable -> com.analysys.visual.bind.VisualBindManager$a:
+    com.analysys.ui.RootView mRootView -> b
+    long mTime -> c
+    com.analysys.visual.bind.VisualBindManager this$0 -> a
+    493:496:void <init>(com.analysys.visual.bind.VisualBindManager,com.analysys.ui.RootView,long) -> <init>
+    503:503:boolean waitToLong() -> a
+    509:537:void run() -> run
+    541:545:boolean equals(java.lang.Object) -> equals
+    489:489:com.analysys.ui.RootView access$400(com.analysys.visual.bind.VisualBindManager$DelayBindRunnable) -> a
+com.analysys.visual.bind.VisualBindManager$NewArrayList -> com.analysys.visual.bind.VisualBindManager$b:
+    com.analysys.visual.bind.VisualBindManager this$0 -> a
+    173:173:void <init>(com.analysys.visual.bind.VisualBindManager) -> <init>
+    176:186:boolean add(android.view.View) -> a
+    191:202:android.view.View remove(int) -> a
+    173:173:java.lang.Object remove(int) -> remove
+    173:173:boolean add(java.lang.Object) -> add
+com.analysys.visual.bind.event.BindHelper -> com.analysys.visual.b:
+    17:22:void bind(android.view.View,com.analysys.visual.bind.event.ICaller,com.analysys.visual.bind.event.ICallOnceListener) -> a
+    28:35:void unbind(android.view.View,com.analysys.visual.bind.event.ICaller,com.analysys.visual.bind.event.ICallOnceListener) -> b
+com.analysys.visual.bind.event.EventFactory -> com.analysys.visual.c:
+    java.lang.String sVersionName -> a
+    54:278:com.analysys.visual.bind.event.impl.BaseEvent createEvent(java.lang.String,org.json.JSONObject) -> a
+    282:290:void addCondition(com.analysys.visual.bind.event.impl.BaseEvent,com.analysys.visual.bind.event.EventTarget,com.analysys.visual.bind.property.IProperty) -> a
+    293:310:com.analysys.visual.bind.event.impl.BaseEvent$Relate json2Relate(org.json.JSONObject) -> a
+    366:376:boolean checkVersion(org.json.JSONObject) -> b
+    380:383:boolean isVersionValid(java.lang.String) -> a
+    402:428:com.analysys.visual.bind.event.impl.BaseEvent newEvent(java.lang.String,com.analysys.visual.bind.event.EventTarget,boolean) -> a
+com.analysys.visual.bind.event.EventTarget -> com.analysys.visual.d:
+    java.util.List NEVER_MATCH_PATH -> i
+    java.util.List path -> a
+    java.lang.String oldPathStr -> b
+    boolean isOldPath -> c
+    java.util.List propsBindingList -> d
+    boolean isFixSibRow -> e
+    java.util.List listSibTop -> f
+    java.lang.String h5Path -> g
+    int sibTopDistance -> h
+    91:120:void <init>(org.json.JSONObject,boolean) -> <init>
+    91:133:void <init>(java.util.List,int) -> <init>
+    147:206:java.util.List readPath(org.json.JSONArray) -> a
+    229:249:java.lang.Integer reconcileIds(int,java.lang.String) -> a
+    30:30:void <clinit>() -> <clinit>
+com.analysys.visual.bind.event.EventTarget$SibTop -> com.analysys.visual.d$a:
+    int row -> a
+    java.lang.String sibClassName -> b
+    int pathIdx -> c
+    com.analysys.visual.bind.event.EventTarget this$0 -> d
+    58:71:void <init>(com.analysys.visual.bind.event.EventTarget,java.lang.String,int,int) -> <init>
+    75:75:java.lang.String toString() -> toString
+com.analysys.visual.bind.event.ICallOnceListener -> com.analysys.visual.e:
+    void listen(android.view.View) -> a
+    void reset(android.view.View) -> b
+    void addCaller(com.analysys.visual.bind.event.ICaller) -> a
+    void removeCaller(com.analysys.visual.bind.event.ICaller) -> b
+    java.util.Set getCaller() -> a
+com.analysys.visual.bind.event.ICaller -> com.analysys.visual.f:
+    void call(java.lang.Object[]) -> a
+com.analysys.visual.bind.event.IEventAction -> com.analysys.visual.g:
+    void doAction(com.analysys.visual.bind.event.impl.BaseEvent) -> a
+com.analysys.visual.bind.event.impl.BaseEvent -> com.analysys.visual.h:
+    int id -> a
+    java.lang.String eventId -> b
+    java.lang.String recordType -> c
+    java.lang.String eventType -> d
+    java.lang.String eventPageName -> e
+    com.analysys.visual.bind.event.impl.BaseEvent$BindingRange bindingRange -> f
+    com.analysys.visual.bind.event.EventTarget target -> g
+    com.analysys.visual.bind.event.EventTarget sibTopTarget -> h
+    java.util.List listEventAction -> i
+    java.util.List listProperties -> j
+    java.util.List listRelate -> k
+    java.util.List listCondition -> l
+    long mEventTime -> q
+    java.lang.String strEvent -> m
+    java.util.Map mAllProperties -> n
+    int mEventRootHashCode -> o
+    java.util.Map mBindView -> p
+    112:221:void <init>(java.lang.String) -> <init>
+    124:124:boolean availableForHybrid() -> a
+    226:245:void bind(com.analysys.ui.RootView) -> a
+    void doBind(com.analysys.visual.bind.locate.ViewFinder$FindResult) -> a
+    void doUnbind(com.analysys.visual.bind.locate.ViewFinder$FindResult) -> b
+    253:260:void unbind(com.analysys.ui.RootView) -> b
+    264:270:void unbindAll() -> b
+    276:277:boolean checkTime() -> c
+    281:282:void setEventTime() -> d
+    288:292:java.util.List getBindViews(int) -> a
+    345:389:boolean inRange(com.analysys.ui.RootView) -> c
+    396:396:java.util.Map getProperties() -> e
+    403:440:void calculateAllProperties() -> f
+    446:470:android.view.View getEventRootView(com.analysys.visual.bind.event.impl.BaseEvent$Relate) -> a
+    479:518:java.util.Map getRelateProperties(com.analysys.visual.bind.event.impl.BaseEvent$Relate) -> b
+    522:558:android.view.View getFixRelateView(android.view.ViewGroup,int,int,java.util.List,java.util.List) -> a
+    565:590:boolean isMatchCondition() -> g
+    597:608:void initFire(android.view.View,boolean) -> a
+    614:625:int getRootViewHashCode(android.view.View) -> a
+    634:640:void fire(boolean) -> a
+    644:659:boolean equals(java.lang.Object) -> equals
+com.analysys.visual.bind.event.impl.BaseEvent$BindingRange -> com.analysys.visual.h$a:
+    boolean allActivity -> a
+    java.util.List activities -> b
+    boolean allDialog -> c
+    java.util.List dialogPages -> d
+    boolean allFloatWin -> e
+    java.util.List floatWinPages -> f
+    boolean allPopWin -> g
+    java.util.List popWinPages -> h
+    com.analysys.visual.bind.event.impl.BaseEvent this$0 -> i
+    130:170:void <init>(com.analysys.visual.bind.event.impl.BaseEvent) -> <init>
+com.analysys.visual.bind.event.impl.BaseEvent$EventCondition -> com.analysys.visual.h$b:
+    com.analysys.visual.bind.event.impl.BaseEvent this$0 -> a
+    197:197:void <init>(com.analysys.visual.bind.event.impl.BaseEvent) -> <init>
+    200:208:boolean isMatch(android.view.View) -> a
+com.analysys.visual.bind.event.impl.BaseEvent$Relate -> com.analysys.visual.h$c:
+    com.analysys.visual.bind.event.EventTarget target -> b
+    java.util.List listProperty -> c
+    java.lang.String strRelate -> d
+    176:176:void <init>() -> <init>
+com.analysys.visual.bind.event.impl.CallOnceAccessibilityListener -> com.analysys.visual.i:
+    android.view.View$AccessibilityDelegate mOri -> a
+    boolean mIsCalling -> b
+    java.util.Set mCaller -> c
+    22:27:void <init>(android.view.View,com.analysys.visual.bind.event.ICaller) -> <init>
+    31:32:void addCaller(com.analysys.visual.bind.event.ICaller) -> a
+    36:37:void removeCaller(com.analysys.visual.bind.event.ICaller) -> b
+    41:41:java.util.Set getCaller() -> a
+    45:45:java.lang.Object getBindListener(android.view.View) -> c
+    50:50:java.lang.Object getCurrent(android.view.View) -> d
+    55:56:void reset(android.view.View) -> b
+    60:61:void listen(android.view.View) -> a
+    65:76:void sendAccessibilityEvent(android.view.View,int) -> sendAccessibilityEvent
+com.analysys.visual.bind.event.impl.EventAccessibilityBase -> com.analysys.visual.j:
+    int mAccessibilityEventType -> q
+    23:25:void <init>(java.lang.String,int) -> <init>
+    28:28:int getAccessibilityEventType() -> f
+    android.view.View$AccessibilityDelegate getDelegate(int,android.view.View) -> a
+    41:59:void call(java.lang.Object[]) -> a
+com.analysys.visual.bind.event.impl.EventAccessibilityBase$1 -> com.analysys.visual.j$1:
+    android.view.View val$eventView -> a
+    boolean val$isMock -> b
+    com.analysys.visual.bind.event.impl.EventAccessibilityBase this$0 -> c
+    48:48:void <init>(com.analysys.visual.bind.event.impl.EventAccessibilityBase,android.view.View,boolean) -> <init>
+    52:56:void run() -> run
+com.analysys.visual.bind.event.impl.EventActionReport -> com.analysys.visual.k:
+    12:12:void <init>() -> <init>
+    16:17:void doAction(com.analysys.visual.bind.event.impl.BaseEvent) -> a
+com.analysys.visual.bind.event.impl.EventSibAccessibility -> com.analysys.visual.l:
+    android.util.SparseArray mSibBindMap -> q
+    57:61:void <init>(java.lang.String,int) -> <init>
+    65:113:void doBind(com.analysys.visual.bind.locate.ViewFinder$FindResult) -> a
+    132:136:java.util.List getBindViews(int) -> a
+    144:160:android.view.View$AccessibilityDelegate getDelegate(int,android.view.View) -> a
+    176:222:void bindChild(android.view.ViewGroup,int,int,int,java.util.List,java.util.List,java.util.LinkedHashMap) -> a
+    225:241:int getSibRow(android.view.View) -> b
+    322:331:void unbindAllChild(java.util.LinkedHashMap) -> a
+    508:525:void doUnbind(com.analysys.visual.bind.locate.ViewFinder$FindResult) -> b
+com.analysys.visual.bind.event.impl.EventSigleAccessibility -> com.analysys.visual.m:
+    android.util.SparseArray mBindMap -> q
+    23:27:void <init>(java.lang.String,int) -> <init>
+    31:47:android.view.View$AccessibilityDelegate getDelegate(int,android.view.View) -> a
+    52:78:void doBind(com.analysys.visual.bind.locate.ViewFinder$FindResult) -> a
+    82:93:void doUnbind(com.analysys.visual.bind.locate.ViewFinder$FindResult) -> b
+com.analysys.visual.bind.event.impl.EventWebView -> com.analysys.visual.n:
+    android.view.View mWebView -> q
+    30:31:void <init>(java.lang.String) -> <init>
+    35:35:void doBind(com.analysys.visual.bind.locate.ViewFinder$FindResult) -> a
+    39:39:void doUnbind(com.analysys.visual.bind.locate.ViewFinder$FindResult) -> b
+    43:43:void call(java.lang.Object[]) -> a
+    46:70:void setAllProperties(java.lang.String,java.lang.String) -> a
+    74:87:android.view.View getEventRootView(com.analysys.visual.bind.event.impl.BaseEvent$Relate) -> a
+    91:114:java.lang.String getNativeProperty(java.lang.Object,java.lang.String) -> a
+com.analysys.visual.bind.locate.PathMatcher -> com.analysys.visual.o:
+    com.analysys.visual.bind.locate.PathMatcher$IndexStack mIndexStack -> a
+    22:24:void <init>() -> <init>
+    27:38:boolean hasClassName(java.lang.Object,java.lang.String) -> a
+    43:61:android.view.View findViewInRoot(android.view.View,java.util.List,boolean,boolean) -> a
+    66:118:android.view.View findViewInMatchedRoot(android.view.View,com.analysys.visual.bind.locate.PathMatcher$PathElement,java.util.List,boolean) -> a
+    122:180:android.view.View findViewMatch(com.analysys.visual.bind.locate.PathMatcher$PathElement,android.view.View,int,boolean) -> a
+    193:209:boolean matches(com.analysys.visual.bind.locate.PathMatcher$PathElement,android.view.View) -> a
+com.analysys.visual.bind.locate.PathMatcher$IndexStack -> com.analysys.visual.o$a:
+    int[] mStack -> a
+    int mStackSize -> b
+    303:306:void <init>() -> <init>
+    309:309:boolean full() -> a
+    313:316:int alloc() -> b
+    320:320:int read(int) -> a
+    324:325:void increment(int) -> b
+    328:332:void free() -> c
+com.analysys.visual.bind.locate.PathMatcher$PathElement -> com.analysys.visual.o$b:
+    int prefix -> a
+    java.lang.String viewClassName -> b
+    int index -> c
+    int viewId -> d
+    java.lang.String viewIdName -> e
+    java.lang.String contentDescription -> f
+    java.lang.String tag -> g
+    int row -> h
+    227:237:void <init>(int,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,int) -> <init>
+    241:252:boolean equals(java.lang.Object) -> equals
+    257:286:org.json.JSONObject toJsonObject() -> a
+    291:295:java.lang.String toString() -> toString
+com.analysys.visual.bind.locate.ViewFinder -> com.analysys.visual.p:
+    66:76:com.analysys.visual.bind.locate.ViewFinder$FindResult find(android.view.View,com.analysys.visual.bind.event.impl.BaseEvent) -> a
+    98:129:java.util.List findViewByEventTarget(android.view.View,com.analysys.visual.bind.event.EventTarget,boolean,boolean) -> a
+    136:137:android.view.View findByPath(android.view.View,java.util.List,boolean,boolean) -> a
+    144:164:void findByProperties(android.view.View,java.util.List,java.util.List) -> a
+com.analysys.visual.bind.locate.ViewFinder$FindResult -> com.analysys.visual.p$a:
+    int rootViewHashCode -> a
+    android.view.View sibTopView -> b
+    java.util.List listTargetView -> c
+    android.view.View eventView -> d
+    24:28:void <init>(int,java.util.List,android.view.View) -> <init>
+    52:58:void clear() -> a
+com.analysys.visual.bind.property.IProperty -> com.analysys.visual.q:
+    boolean isMatch(java.lang.Object) -> a
+com.analysys.visual.bind.property.PropertyFactory -> com.analysys.visual.s:
+    30:62:com.analysys.visual.bind.property.impl.BaseProperty createProperty(org.json.JSONObject) -> a
+com.analysys.visual.bind.property.impl.BaseProperty -> com.analysys.visual.t:
+    java.lang.String name -> b
+    java.lang.String key -> a
+    java.lang.String mPropType -> c
+    com.analysys.visual.utils.ReflectUnit mReflect -> d
+    java.lang.Object mMatchValue -> e
+    java.lang.String mRegex -> f
+    45:52:void <init>(java.lang.String,java.lang.String,java.lang.String,com.analysys.visual.utils.ReflectUnit,java.lang.Object,java.lang.String) -> <init>
+    61:75:java.lang.Object getValue(java.lang.Object) -> b
+    79:118:java.lang.Object getTypeValue(java.lang.Object) -> c
+    123:123:java.lang.Object getMatchValue() -> a
+    128:145:boolean isMatch(java.lang.Object) -> a
+    149:149:java.lang.Object getProperty(android.view.View) -> a
+com.analysys.visual.bind.property.impl.PropertyClass -> com.analysys.visual.u:
+    17:18:void <init>(java.lang.String,java.lang.String,java.lang.String,com.analysys.visual.utils.ReflectUnit,java.lang.Object,java.lang.String) -> <init>
+    22:22:java.lang.Object getProperty(android.view.View) -> a
+    27:47:boolean isMatch(java.lang.Object) -> a
+com.analysys.visual.bind.property.impl.PropertyText -> com.analysys.visual.v:
+    21:22:void <init>(java.lang.String,java.lang.String,java.lang.String,com.analysys.visual.utils.ReflectUnit,java.lang.Object,java.lang.String) -> <init>
+    26:32:java.lang.Object getProperty(android.view.View) -> a
+    37:41:java.lang.Object getTextFromImageView(android.view.View) -> b
+    45:50:java.lang.String getTextFromTextView(android.widget.TextView) -> a
+com.analysys.visual.cmd.CmdDeviceInfoImpl -> com.analysys.visual.w:
+    java.lang.String ID_KEY -> a
+    java.util.Map mDeviceInfo -> b
+    29:29:void <init>() -> <init>
+    35:64:void handleCmd(java.lang.Object,java.io.OutputStream) -> a
+    74:95:java.util.Map getDeviceInfo(android.content.Context) -> a
+    100:126:java.lang.String getDeviceID(android.content.Context) -> b
+    134:147:java.lang.String getSerialNum(android.content.Context) -> c
+    155:163:java.lang.String generateID(android.content.Context) -> d
+    69:69:void <clinit>() -> <clinit>
+com.analysys.visual.cmd.CmdEventBindImpl -> com.analysys.visual.x:
+    7:7:void <init>() -> <init>
+    11:12:void handleCmd(java.lang.Object,java.io.OutputStream) -> a
+com.analysys.visual.cmd.CmdSendToServerImpl -> com.analysys.visual.y:
+    20:20:void <init>() -> <init>
+    40:79:void handleCmd(java.lang.Object,java.io.OutputStream) -> a
+com.analysys.visual.cmd.CmdSnapshotImpl -> com.analysys.visual.z:
+    java.lang.String mConfig -> a
+    java.lang.String mFrontProcessName -> b
+    22:22:void <init>() -> <init>
+    32:62:void handleCmd(java.lang.Object,java.io.OutputStream) -> a
+    65:66:void clear() -> a
+com.analysys.visual.cmd.ICmdHandler -> com.analysys.visual.aa:
+    void handleCmd(java.lang.Object,java.io.OutputStream) -> a
+com.analysys.visual.cmd.PageViewCapture -> com.analysys.visual.ab:
+    com.analysys.visual.cmd.PageViewCapture$RootViewCapture mRootViewCapture -> a
+    java.util.List mListPageViewInfo -> b
+    com.analysys.visual.cmd.PageViewCapture$ViewClassCache mViewClassCache -> c
+    android.os.Handler mMainHandler -> d
+    java.lang.String mPageSignCache -> e
+    boolean mContainsWebView -> f
+    57:62:void <init>(java.util.List) -> <init>
+    68:77:boolean checkAndUpdateChange(java.util.List) -> a
+    81:91:java.util.List getListRootViewInfo() -> a
+    255:293:void capture(java.io.OutputStream,java.util.List) -> a
+    296:299:void captureViewHierarchy(com.analysys.visual.cmd.PageViewCapture$OutputStreamWriter,com.analysys.visual.cmd.PageViewCapture$JsonWriter,android.view.View) -> a
+    302:445:void captureView(com.analysys.visual.cmd.PageViewCapture$OutputStreamWriter,com.analysys.visual.cmd.PageViewCapture$JsonWriter,android.view.View) -> b
+    448:468:int getRowIdx(android.view.View) -> a
+    475:478:boolean isInvisible(android.view.View) -> b
+    483:574:void addProperties(com.analysys.visual.cmd.PageViewCapture$JsonWriter,android.view.View) -> a
+    50:50:boolean access$000(com.analysys.visual.cmd.PageViewCapture) -> a
+com.analysys.visual.cmd.PageViewCapture$JsonWriter -> com.analysys.visual.ab$a:
+    boolean needComma -> a
+    com.analysys.visual.cmd.PageViewCapture$OutputStreamWriter writer -> b
+    com.analysys.visual.cmd.PageViewCapture this$0 -> c
+    130:132:void <init>(com.analysys.visual.cmd.PageViewCapture,com.analysys.visual.cmd.PageViewCapture$OutputStreamWriter) -> <init>
+    135:140:void beginObject() -> a
+    143:148:com.analysys.visual.cmd.PageViewCapture$JsonWriter name(java.lang.String) -> a
+    152:157:void value(int) -> a
+    160:162:void endObject() -> b
+    165:165:void flush() -> c
+    168:173:void beginArray() -> d
+    176:178:void endArray() -> e
+    181:186:void nullValue() -> f
+    189:243:void value(java.lang.String) -> b
+    246:251:void value(java.lang.Object) -> a
+com.analysys.visual.cmd.PageViewCapture$OutputStreamWriter -> com.analysys.visual.ab$b:
+    java.io.OutputStream out -> a
+    java.lang.StringBuilder sbTxt -> b
+    com.analysys.visual.cmd.PageViewCapture this$0 -> c
+    102:105:void <init>(com.analysys.visual.cmd.PageViewCapture,java.io.OutputStream) -> <init>
+    108:109:void write(java.lang.String) -> a
+    113:120:void flush() -> a
+com.analysys.visual.cmd.PageViewCapture$RootViewCapture -> com.analysys.visual.ab$c:
+    java.util.Map mBitmapMap -> b
+    com.analysys.visual.cmd.PageViewCapture this$0 -> a
+    590:592:void <init>(com.analysys.visual.cmd.PageViewCapture) -> <init>
+    596:621:java.util.List call() -> a
+    649:716:void screenshot(com.analysys.ui.WindowUIHelper$PageRootInfo) -> a
+    719:727:void findWebView(android.view.ViewGroup,java.util.List) -> a
+    587:587:java.lang.Object call() -> call
+com.analysys.visual.cmd.PageViewCapture$RootViewCapture$WebViewLayerCache -> com.analysys.visual.ab$c$a:
+    android.view.View webView -> a
+    int oriLayerType -> b
+    android.graphics.Paint oriLayerPaint -> c
+    com.analysys.visual.cmd.PageViewCapture$RootViewCapture this$1 -> d
+    629:633:void <init>(com.analysys.visual.cmd.PageViewCapture$RootViewCapture,android.view.View) -> <init>
+    636:639:void checkAndDisableHardwareAccelerated() -> a
+    642:645:void reset() -> b
+com.analysys.visual.cmd.PageViewCapture$ViewClassCache -> com.analysys.visual.ab$d:
+    578:579:void <init>(int) -> <init>
+    583:583:java.lang.String create(java.lang.Class) -> a
+    576:576:java.lang.Object create(java.lang.Object) -> create
+com.analysys.visual.cmd.PageViewInfo -> com.analysys.visual.ac:
+    java.lang.String name -> a
+    java.lang.Class targetClass -> b
+    com.analysys.visual.utils.ViewMethodReflector accessor -> c
+    11:15:void <init>(java.lang.String,java.lang.Class,com.analysys.visual.utils.ViewMethodReflector) -> <init>
+    19:23:boolean equals(java.lang.Object) -> equals
+    28:28:java.lang.String toString() -> toString
+com.analysys.visual.cmd.SnapshotWrapper -> com.analysys.visual.ad:
+    java.lang.Class[] NO_PARAMS -> a
+    com.analysys.visual.cmd.PageViewCapture mPageViewCapture -> b
+    19:19:void <init>() -> <init>
+    27:35:void init(java.lang.String) -> a
+    38:54:byte[] getSnapshotData(boolean) -> a
+    58:105:void snapshot2Stream(java.io.OutputStream,boolean) -> a
+    108:130:com.analysys.visual.cmd.PageViewCapture readPageConfig(org.json.JSONObject) -> a
+    135:151:void addPageViewInfo(java.util.List,com.analysys.visual.cmd.PageViewInfo) -> a
+    154:164:com.analysys.visual.cmd.PageViewInfo getPageViewInfo(java.lang.Class,org.json.JSONObject) -> a
+    168:169:void clear() -> a
+    22:22:void <clinit>() -> <clinit>
+com.analysys.visual.conn.ConnAgent -> com.analysys.visual.ae:
+    java.nio.ByteBuffer EMPTY_BYTE_BUFFER -> a
+    com.analysys.visual.conn.ConnAgent$Editor mService -> b
+    com.analysys.visual.conn.ConnAgent$EditorClient mClient -> c
+    32:40:void <init>(java.net.URI,com.analysys.visual.conn.ConnAgent$Editor,java.net.Socket) -> <init>
+    43:43:boolean isValid() -> a
+    47:47:boolean isConnected() -> b
+    51:52:void close() -> c
+    55:55:java.io.BufferedOutputStream getBufferedOutputStream() -> d
+    23:23:com.analysys.visual.conn.ConnAgent$Editor access$100(com.analysys.visual.conn.ConnAgent) -> a
+    23:23:com.analysys.visual.conn.ConnAgent$EditorClient access$200(com.analysys.visual.conn.ConnAgent) -> b
+    23:23:java.nio.ByteBuffer access$300() -> e
+    26:26:void <clinit>() -> <clinit>
+com.analysys.visual.conn.ConnAgent$1 -> com.analysys.visual.ae$1:
+com.analysys.visual.conn.ConnAgent$Editor -> com.analysys.visual.ae$a:
+    void sendSnapshot(org.json.JSONObject) -> a
+    void bindEvents(org.json.JSONObject) -> b
+    void sendDeviceInfo() -> a
+    void cleanup() -> b
+com.analysys.visual.conn.ConnAgent$EditorClient -> com.analysys.visual.ae$b:
+    com.analysys.visual.conn.ConnAgent this$0 -> a
+    79:82:void <init>(com.analysys.visual.conn.ConnAgent,java.net.URI,int,java.net.Socket) -> <init>
+    87:87:void onOpen(com.analysys.visual.websocket.handshake.ServerHandshake) -> a
+    92:109:void onMessage(java.lang.String) -> a
+    113:114:void onClose(int,java.lang.String,boolean) -> a
+    118:125:void onError(java.lang.Exception) -> a
+com.analysys.visual.conn.ConnAgent$EditorConnectionException -> com.analysys.visual.ae$c:
+    com.analysys.visual.conn.ConnAgent this$0 -> a
+    71:74:void <init>(com.analysys.visual.conn.ConnAgent,java.lang.Throwable) -> <init>
+com.analysys.visual.conn.ConnAgent$WebSocketOutputStream -> com.analysys.visual.ae$d:
+    com.analysys.visual.conn.ConnAgent this$0 -> a
+    128:128:void <init>(com.analysys.visual.conn.ConnAgent) -> <init>
+    133:138:void write(int) -> write
+    143:146:void write(byte[]) -> write
+    151:160:void write(byte[],int,int) -> write
+    165:168:void close() -> close
+    128:128:void <init>(com.analysys.visual.conn.ConnAgent,com.analysys.visual.conn.ConnAgent$1) -> <init>
+com.analysys.visual.conn.ConnManager -> com.analysys.visual.af:
+    android.os.Handler mVisualHandler -> a
+    com.analysys.visual.conn.ConnSensor$IGestureCallback mGestureCallback -> b
+    com.analysys.visual.conn.ConnSensor mConnSensor -> c
+    boolean mIsSensorRegistered -> d
+    com.analysys.visual.conn.ConnAgent mConnAgent -> e
+    30:47:void <init>(android.os.Handler) -> <init>
+    53:94:void doConnect() -> a
+    97:100:void close() -> b
+    103:103:boolean isConnected() -> c
+    107:117:void registerSensor() -> d
+    120:128:void unregisterSensor() -> e
+    131:136:java.io.OutputStream getNewOutputStream() -> f
+    163:169:void sendMessage(int,java.lang.Object) -> a
+    26:26:void access$000(com.analysys.visual.conn.ConnManager,int,java.lang.Object) -> a
+com.analysys.visual.conn.ConnManager$1 -> com.analysys.visual.af$1:
+    com.analysys.visual.conn.ConnManager this$0 -> a
+    38:38:void <init>(com.analysys.visual.conn.ConnManager) -> <init>
+    41:44:void onGestureDetected() -> a
+com.analysys.visual.conn.ConnManager$Editor -> com.analysys.visual.af$a:
+    com.analysys.visual.conn.ConnManager this$0 -> a
+    139:139:void <init>(com.analysys.visual.conn.ConnManager) -> <init>
+    143:144:void sendSnapshot(org.json.JSONObject) -> a
+    148:149:void bindEvents(org.json.JSONObject) -> b
+    153:154:void sendDeviceInfo() -> a
+    158:159:void cleanup() -> b
+com.analysys.visual.conn.ConnSensor -> com.analysys.visual.ag:
+    long TIGGER_TIME -> a
+    com.analysys.visual.conn.ConnSensor$IGestureCallback mCallback -> b
+    float[] mAccXCache -> c
+    float[] mAccYCache -> d
+    float[] mAccZCache -> e
+    int mStartIdx -> f
+    int mCurrentDataIdx -> g
+    boolean mDataOverrided -> h
+    int SHAKE_THRESHOLD -> i
+    int SHAKE_DIV_THRESHOLD -> j
+    20:46:void <init>(com.analysys.visual.conn.ConnSensor$IGestureCallback) -> <init>
+    49:118:boolean shakeOffOrFlip(float[]) -> a
+    124:137:void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+    141:141:void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    144:147:void reset() -> a
+    15:33:void <clinit>() -> <clinit>
+com.analysys.visual.conn.ConnSensor$IGestureCallback -> com.analysys.visual.ag$a:
+    void onGestureDetected() -> a
+com.analysys.visual.utils.ReflectUnit -> com.analysys.visual.ah:
+    java.lang.String mReflectName -> a
+    java.lang.Class[] mParamsClz -> b
+    java.lang.Object[] mParamsValue -> c
+    26:40:void <init>(org.json.JSONObject) -> <init>
+    46:49:java.lang.Object call(java.lang.Object) -> a
+com.analysys.visual.utils.ViewMethodReflector -> com.analysys.visual.ai:
+    java.lang.String mMethodName -> a
+    java.lang.Object[] mMethodArgs -> b
+    java.lang.Class mMethodResultType -> c
+    java.lang.Class mTargetClass -> d
+    java.lang.reflect.Method mTargetMethod -> e
+    17:28:void <init>(java.lang.Class,java.lang.String,java.lang.Object[],java.lang.Class) -> <init>
+    31:49:java.lang.Class assignableArgType(java.lang.Class) -> a
+    54:54:java.lang.String toString() -> toString
+    58:58:java.lang.Object applyMethod(android.view.View) -> a
+    62:71:java.lang.Object applyMethodWithArguments(android.view.View,java.lang.Object[]) -> a
+    75:108:java.lang.reflect.Method pickMethod(java.lang.Class) -> b
+com.analysys.visual.utils.VisualIpc -> com.analysys.visual.utils.VisualIpc:
+    com.analysys.visual.utils.VisualIpc sInstance -> sInstance
+    com.analysys.visual.cmd.SnapshotWrapper mSnapshotWrapper -> mSnapshotWrapper
+    int MAX_BINDER_SIZE -> MAX_BINDER_SIZE
+    byte[] mSnapshotTmpData -> mSnapshotTmpData
+    int mSnapshotTmpDataIdx -> mSnapshotTmpDataIdx
+    35:42:void <init>() -> <init>
+    39:39:com.analysys.visual.utils.VisualIpc getInstance() -> getInstance
+    46:98:com.analysys.ipc.BytesParcelable getVisualSnapshotData(java.lang.String,boolean) -> getVisualSnapshotData
+    107:121:void clearVisualSnapshot() -> clearVisualSnapshot
+    125:139:void onVisualEditEvent(java.lang.String) -> onVisualEditEvent
+    143:159:void reportVisualEvent(java.lang.String,java.lang.String,java.util.Map) -> reportVisualEvent
+    163:176:void setVisualEditing(boolean) -> setVisualEditing
+    180:201:void sendVisualEditEvent2Client(java.lang.String) -> sendVisualEditEvent2Client
+    205:219:void reloadVisualEventLocal() -> reloadVisualEventLocal
+    33:33:void <clinit>() -> <clinit>
+com.analysys.visual.utils.WebViewBindHelper -> com.analysys.visual.aj:
+    com.analysys.visual.utils.WebViewBindHelper sInstance -> a
+    java.util.Map mHybridObjects -> b
+    29:33:void <init>() -> <init>
+    36:36:com.analysys.visual.utils.WebViewBindHelper getInstance() -> a
+    40:45:boolean isVisualDomListChanged() -> b
+    52:66:java.lang.String getVisualDomList(java.lang.Object) -> a
+    76:77:void bindWebView(java.lang.Object,java.lang.String) -> a
+    80:81:void unBindAll() -> c
+    84:84:java.lang.String getEventStr(java.lang.String) -> a
+    88:90:void clearHybridInPage(int) -> a
+    93:103:void bindWebViewInPage(android.view.View,java.lang.String) -> a
+    106:143:java.util.Map getHybridProperty(android.view.View,java.lang.String) -> b
+    148:148:boolean isHybrid(int) -> isHybrid
+    153:164:void onVisualDomList(int,java.lang.String) -> onVisualDomList
+    168:177:void onProperty(int,java.lang.String) -> onProperty
+    181:182:void AnalysysAgentTrack(int,java.lang.String,java.lang.String,java.lang.String) -> AnalysysAgentTrack
+    186:187:java.lang.String getEventList(int) -> getEventList
+    192:199:java.lang.String getProperty(java.lang.Object,java.lang.String) -> getProperty
+    204:206:void notifyInject(int) -> notifyInject
+    210:214:void clearHybrid(int) -> clearHybrid
+    28:28:void <clinit>() -> <clinit>
+com.analysys.visual.utils.WebViewBindHelper$1 -> com.analysys.visual.aj$1:
+com.analysys.visual.utils.WebViewBindHelper$HybridEventObject -> com.analysys.visual.aj$a:
+    java.lang.String hybridDomList -> b
+    boolean domListChanged -> c
+    java.lang.String hybridProperty -> d
+    com.analysys.visual.utils.WebViewBindHelper this$0 -> a
+    216:219:void <init>(com.analysys.visual.utils.WebViewBindHelper) -> <init>
+    224:226:void clear() -> a
+    216:216:boolean access$000(com.analysys.visual.utils.WebViewBindHelper$HybridEventObject) -> a
+    216:216:java.lang.String access$100(com.analysys.visual.utils.WebViewBindHelper$HybridEventObject) -> b
+    216:216:java.lang.String access$202(com.analysys.visual.utils.WebViewBindHelper$HybridEventObject,java.lang.String) -> a
+    216:216:java.lang.String access$200(com.analysys.visual.utils.WebViewBindHelper$HybridEventObject) -> c
+    216:216:boolean access$002(com.analysys.visual.utils.WebViewBindHelper$HybridEventObject,boolean) -> a
+    216:216:java.lang.String access$102(com.analysys.visual.utils.WebViewBindHelper$HybridEventObject,java.lang.String) -> b
+    216:216:void <init>(com.analysys.visual.utils.WebViewBindHelper,com.analysys.visual.utils.WebViewBindHelper$1) -> <init>
+com.analysys.visual.websocket.AbstractWebSocket -> com.analysys.visual.ak:
+    boolean tcpNoDelay -> a
+    boolean reuseAddr -> b
+    java.util.Timer connectionLostTimer -> c
+    java.util.TimerTask connectionLostTimerTask -> d
+    int connectionLostTimeout -> e
+    boolean websocketRunning -> f
+    39:74:void <init>() -> <init>
+    130:137:void stopConnectionLostTimer() -> a
+    144:155:void startConnectionLostTimer() -> b
+    162:214:void restartConnectionLostTimer() -> f
+    java.util.Collection getConnections() -> c
+    228:236:void cancelConnectionLostTimer() -> g
+    245:245:boolean isTcpNoDelay() -> d
+    257:258:void setTcpNoDelay(boolean) -> a
+    267:267:boolean isReuseAddr() -> e
+    279:280:void setReuseAddr(boolean) -> b
+    39:39:int access$000(com.analysys.visual.websocket.AbstractWebSocket) -> a
+com.analysys.visual.websocket.AbstractWebSocket$1 -> com.analysys.visual.ak$1:
+    java.util.ArrayList connections -> b
+    com.analysys.visual.websocket.AbstractWebSocket this$0 -> a
+    164:169:void <init>(com.analysys.visual.websocket.AbstractWebSocket) -> <init>
+    173:210:void run() -> run
+com.analysys.visual.websocket.BaseWebSocketAdapter -> com.analysys.visual.al:
+    42:42:void <init>() -> <init>
+    53:53:com.analysys.visual.websocket.handshake.ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.drafts.BaseDraft,com.analysys.visual.websocket.handshake.ClientHandshake) -> a
+    60:60:void onWebsocketHandshakeReceivedAsClient(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.handshake.ClientHandshake,com.analysys.visual.websocket.handshake.ServerHandshake) -> a
+    71:71:void onWebsocketHandshakeSentAsClient(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.handshake.ClientHandshake) -> a
+    92:93:void onWebsocketPing(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.framing.Framedata) -> a
+    103:103:void onWebsocketPong(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.framing.Framedata) -> b
+com.analysys.visual.websocket.WebSocket -> com.analysys.visual.am:
+    void sendFrame(com.analysys.visual.websocket.framing.Framedata) -> a
+com.analysys.visual.websocket.WebSocket$READYSTATE -> com.analysys.visual.am$a:
+    com.analysys.visual.websocket.WebSocket$READYSTATE NOT_YET_CONNECTED -> a
+    com.analysys.visual.websocket.WebSocket$READYSTATE CONNECTING -> b
+    com.analysys.visual.websocket.WebSocket$READYSTATE OPEN -> c
+    com.analysys.visual.websocket.WebSocket$READYSTATE CLOSING -> d
+    com.analysys.visual.websocket.WebSocket$READYSTATE CLOSED -> e
+    com.analysys.visual.websocket.WebSocket$READYSTATE[] $VALUES -> f
+    242:242:com.analysys.visual.websocket.WebSocket$READYSTATE[] values() -> values
+    242:242:com.analysys.visual.websocket.WebSocket$READYSTATE valueOf(java.lang.String) -> valueOf
+    242:242:void <init>(java.lang.String,int) -> <init>
+    242:248:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.WebSocket$Role -> com.analysys.visual.am$b:
+    com.analysys.visual.websocket.WebSocket$Role CLIENT -> a
+    com.analysys.visual.websocket.WebSocket$Role SERVER -> b
+    com.analysys.visual.websocket.WebSocket$Role[] $VALUES -> c
+    235:235:com.analysys.visual.websocket.WebSocket$Role[] values() -> values
+    235:235:com.analysys.visual.websocket.WebSocket$Role valueOf(java.lang.String) -> valueOf
+    235:235:void <init>(java.lang.String,int) -> <init>
+    235:239:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.WebSocketImpl -> com.analysys.visual.an:
+    java.lang.Object SYNCHRONIZE_WRITE_OBJECT -> h
+    int RCVBUF -> a
+    boolean DEBUG -> b
+    java.util.concurrent.BlockingQueue outQueue -> c
+    java.util.concurrent.BlockingQueue inQueue -> d
+    com.analysys.visual.websocket.WebSocketListener wsl -> i
+    java.nio.channels.SelectionKey key -> e
+    java.nio.channels.ByteChannel channel -> f
+    boolean flushandclosestate -> j
+    com.analysys.visual.websocket.WebSocket$READYSTATE readystate -> k
+    java.util.List knownDrafts -> l
+    com.analysys.visual.websocket.drafts.BaseDraft draft -> m
+    com.analysys.visual.websocket.WebSocket$Role role -> n
+    java.nio.ByteBuffer tmpHandshakeBytes -> o
+    com.analysys.visual.websocket.handshake.ClientHandshake handshakerequest -> p
+    java.lang.String closemessage -> q
+    java.lang.Integer closecode -> r
+    java.lang.Boolean closedremotely -> s
+    java.lang.String resourceDescriptor -> t
+    long lastPong -> u
+    com.analysys.visual.websocket.framing.PingFrame pingFrame -> v
+    boolean $assertionsDisabled -> g
+    103:187:void <init>(com.analysys.visual.websocket.WebSocketListener,com.analysys.visual.websocket.drafts.BaseDraft) -> <init>
+    205:232:void decode(java.nio.ByteBuffer) -> a
+    240:370:boolean decodeHandshake(java.nio.ByteBuffer) -> b
+    376:388:void decodeFrames(java.nio.ByteBuffer) -> c
+    396:398:void closeConnectionDueToWrongHandshake(com.analysys.visual.websocket.exceptions.InvalidDataException) -> b
+    406:408:void closeConnectionDueToInternalServerError(java.lang.RuntimeException) -> a
+    418:430:java.nio.ByteBuffer generateHttpResponseDueToError(int) -> b
+    437:480:void close(int,java.lang.String,boolean) -> a
+    484:485:void close(int,java.lang.String) -> a
+    504:542:void closeConnection(int,java.lang.String,boolean) -> b
+    545:546:void closeConnection(int,boolean) -> a
+    558:559:void closeConnection(int,java.lang.String) -> b
+    562:582:void flushAndClose(int,java.lang.String,boolean) -> c
+    585:600:void eot() -> a
+    604:605:void close(int) -> a
+    608:609:void close(com.analysys.visual.websocket.exceptions.InvalidDataException) -> a
+    645:659:void send(java.util.Collection) -> a
+    663:664:void sendFragmentedFrame(com.analysys.visual.websocket.framing.Framedata$Opcode,java.nio.ByteBuffer,boolean) -> a
+    673:674:void sendFrame(com.analysys.visual.websocket.framing.Framedata) -> a
+    678:682:void sendPing() -> b
+    691:709:void startHandshake(com.analysys.visual.websocket.handshake.ClientHandshakeBuilder) -> a
+    712:726:void write(java.nio.ByteBuffer) -> d
+    734:739:void write(java.util.List) -> a
+    742:751:void open(com.analysys.visual.websocket.handshake.Handshakedata) -> a
+    762:762:boolean isOpen() -> c
+    767:767:boolean isClosing() -> d
+    772:772:boolean isFlushAndClose() -> e
+    777:777:boolean isClosed() -> f
+    782:782:com.analysys.visual.websocket.WebSocket$READYSTATE getReadyState() -> g
+    786:787:void setReadyState(com.analysys.visual.websocket.WebSocket$READYSTATE) -> a
+    791:791:int hashCode() -> hashCode
+    796:796:java.lang.String toString() -> toString
+    830:830:long getLastPong() -> h
+    837:838:void updateLastPong() -> i
+    846:846:com.analysys.visual.websocket.WebSocketListener getWebSocketListener() -> j
+    67:77:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.WebSocketListener -> com.analysys.visual.ao:
+    com.analysys.visual.websocket.handshake.ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.drafts.BaseDraft,com.analysys.visual.websocket.handshake.ClientHandshake) -> a
+    void onWebsocketHandshakeReceivedAsClient(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.handshake.ClientHandshake,com.analysys.visual.websocket.handshake.ServerHandshake) -> a
+    void onWebsocketHandshakeSentAsClient(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.handshake.ClientHandshake) -> a
+    void onWebsocketMessage(com.analysys.visual.websocket.WebSocket,java.lang.String) -> a
+    void onWebsocketMessage(com.analysys.visual.websocket.WebSocket,java.nio.ByteBuffer) -> a
+    void onWebsocketOpen(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.handshake.Handshakedata) -> a
+    void onWebsocketClose(com.analysys.visual.websocket.WebSocket,int,java.lang.String,boolean) -> a
+    void onWebsocketClosing(com.analysys.visual.websocket.WebSocket,int,java.lang.String,boolean) -> b
+    void onWebsocketCloseInitiated(com.analysys.visual.websocket.WebSocket,int,java.lang.String) -> a
+    void onWebsocketError(com.analysys.visual.websocket.WebSocket,java.lang.Exception) -> a
+    void onWebsocketPing(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.framing.Framedata) -> a
+    void onWebsocketPong(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.framing.Framedata) -> b
+    void onWriteDemand(com.analysys.visual.websocket.WebSocket) -> a
+com.analysys.visual.websocket.client.BaseWebSocketClient -> com.analysys.visual.ap:
+    java.net.URI uri -> b
+    com.analysys.visual.websocket.WebSocketImpl engine -> a
+    java.net.Socket socket -> c
+    java.io.OutputStream ostream -> d
+    java.net.Proxy proxy -> e
+    java.lang.Thread writeThread -> f
+    com.analysys.visual.websocket.drafts.BaseDraft draft -> g
+    java.util.Map headers -> h
+    java.util.concurrent.CountDownLatch connectLatch -> i
+    java.util.concurrent.CountDownLatch closeLatch -> j
+    int connectTimeout -> k
+    72:196:void <init>(java.net.URI,com.analysys.visual.websocket.drafts.BaseDraft,java.util.Map,int) -> <init>
+    231:235:void setSocket(java.net.Socket) -> a
+    288:294:void connect() -> f
+    302:304:boolean connectBlocking() -> g
+    328:331:void close() -> h
+    376:376:java.util.Collection getConnections() -> c
+    388:447:void run() -> run
+    454:465:int getPort() -> m
+    474:499:void sendHandshake() -> n
+    514:515:void onWebsocketMessage(com.analysys.visual.websocket.WebSocket,java.lang.String) -> a
+    519:520:void onWebsocketMessage(com.analysys.visual.websocket.WebSocket,java.nio.ByteBuffer) -> a
+    532:535:void onWebsocketOpen(com.analysys.visual.websocket.WebSocket,com.analysys.visual.websocket.handshake.Handshakedata) -> a
+    542:549:void onWebsocketClose(com.analysys.visual.websocket.WebSocket,int,java.lang.String,boolean) -> a
+    556:557:void onWebsocketError(com.analysys.visual.websocket.WebSocket,java.lang.Exception) -> a
+    562:562:void onWriteDemand(com.analysys.visual.websocket.WebSocket) -> a
+    566:567:void onWebsocketCloseInitiated(com.analysys.visual.websocket.WebSocket,int,java.lang.String) -> a
+    571:572:void onWebsocketClosing(com.analysys.visual.websocket.WebSocket,int,java.lang.String,boolean) -> b
+    582:582:void onCloseInitiated(int,java.lang.String) -> a
+    593:593:void onClosing(int,java.lang.String,boolean) -> b
+    void onOpen(com.analysys.visual.websocket.handshake.ServerHandshake) -> a
+    void onMessage(java.lang.String) -> a
+    void onClose(int,java.lang.String,boolean) -> a
+    void onError(java.lang.Exception) -> a
+    670:670:void onMessage(java.nio.ByteBuffer) -> a
+    687:693:void closeSocket() -> o
+    708:709:void sendFragmentedFrame(com.analysys.visual.websocket.framing.Framedata$Opcode,java.nio.ByteBuffer,boolean) -> a
+    713:713:boolean isOpen() -> i
+    718:718:boolean isFlushAndClose() -> j
+    723:723:boolean isClosed() -> k
+    728:728:boolean isClosing() -> l
+    764:765:void sendFrame(com.analysys.visual.websocket.framing.Framedata) -> a
+    792:796:void handleIOException(java.io.IOException) -> a
+    67:67:com.analysys.visual.websocket.WebSocketImpl access$100(com.analysys.visual.websocket.client.BaseWebSocketClient) -> a
+    67:67:java.io.OutputStream access$200(com.analysys.visual.websocket.client.BaseWebSocketClient) -> b
+    67:67:void access$300(com.analysys.visual.websocket.client.BaseWebSocketClient,java.io.IOException) -> a
+    67:67:void access$400(com.analysys.visual.websocket.client.BaseWebSocketClient) -> c
+    67:67:java.lang.Thread access$502(com.analysys.visual.websocket.client.BaseWebSocketClient,java.lang.Thread) -> a
+com.analysys.visual.websocket.client.BaseWebSocketClient$1 -> com.analysys.visual.ap$1:
+com.analysys.visual.websocket.client.BaseWebSocketClient$WebsocketWriteThread -> com.analysys.visual.ap$a:
+    com.analysys.visual.websocket.client.BaseWebSocketClient this$0 -> a
+    798:798:void <init>(com.analysys.visual.websocket.client.BaseWebSocketClient) -> <init>
+    801:821:void run() -> run
+    798:798:void <init>(com.analysys.visual.websocket.client.BaseWebSocketClient,com.analysys.visual.websocket.client.BaseWebSocketClient$1) -> <init>
+com.analysys.visual.websocket.drafts.BaseDraft -> com.analysys.visual.aq:
+    int MAX_FAME_SIZE -> a
+    int INITIAL_FAMESIZE -> b
+    com.analysys.visual.websocket.WebSocket$Role role -> c
+    com.analysys.visual.websocket.framing.Framedata$Opcode continuousFrameType -> d
+    61:67:void <init>() -> <init>
+    70:86:java.nio.ByteBuffer readLine(java.nio.ByteBuffer) -> a
+    90:91:java.lang.String readStringLine(java.nio.ByteBuffer) -> b
+    97:151:com.analysys.visual.websocket.handshake.HandshakeBuilder translateHandshakeHttp(java.nio.ByteBuffer,com.analysys.visual.websocket.WebSocket$Role) -> a
+    com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState acceptHandshakeAsClient(com.analysys.visual.websocket.handshake.ClientHandshake,com.analysys.visual.websocket.handshake.ServerHandshake) -> a
+    com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState acceptHandshakeAsServer(com.analysys.visual.websocket.handshake.ClientHandshake) -> a
+    160:160:boolean basicAccept(com.analysys.visual.websocket.handshake.Handshakedata) -> a
+    java.nio.ByteBuffer createBinaryFrame(com.analysys.visual.websocket.framing.Framedata) -> a
+    void processFrame(com.analysys.visual.websocket.WebSocketImpl,com.analysys.visual.websocket.framing.Framedata) -> a
+    179:206:java.util.List continuousFrame(com.analysys.visual.websocket.framing.Framedata$Opcode,java.nio.ByteBuffer,boolean) -> a
+    void reset() -> a
+    212:212:java.util.List createHandshake(com.analysys.visual.websocket.handshake.Handshakedata,com.analysys.visual.websocket.WebSocket$Role) -> a
+    217:248:java.util.List createHandshake(com.analysys.visual.websocket.handshake.Handshakedata,com.analysys.visual.websocket.WebSocket$Role,boolean) -> a
+    com.analysys.visual.websocket.handshake.ClientHandshakeBuilder postProcessHandshakeRequestAsClient(com.analysys.visual.websocket.handshake.ClientHandshakeBuilder) -> a
+    com.analysys.visual.websocket.handshake.HandshakeBuilder postProcessHandshakeResponseAsServer(com.analysys.visual.websocket.handshake.ClientHandshake,com.analysys.visual.websocket.handshake.ServerHandshakeBuilder) -> a
+    java.util.List translateFrame(java.nio.ByteBuffer) -> c
+    com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType getCloseHandshakeType() -> b
+    com.analysys.visual.websocket.drafts.BaseDraft copyInstance() -> c
+    270:270:com.analysys.visual.websocket.handshake.Handshakedata translateHandshake(java.nio.ByteBuffer) -> d
+    274:277:int checkAlloc(int) -> a
+    281:291:int readVersion(com.analysys.visual.websocket.handshake.Handshakedata) -> b
+    295:296:void setParseMode(com.analysys.visual.websocket.WebSocket$Role) -> a
+    304:304:java.lang.String toString() -> toString
+    63:64:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType -> com.analysys.visual.aq$a:
+    com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType NONE -> a
+    com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType ONEWAY -> b
+    com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType TWOWAY -> c
+    com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType[] $VALUES -> d
+    317:317:com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType[] values() -> values
+    317:317:com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType valueOf(java.lang.String) -> valueOf
+    317:317:void <init>(java.lang.String,int) -> <init>
+    317:321:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState -> com.analysys.visual.aq$b:
+    com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState MATCHED -> a
+    com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState NOT_MATCHED -> b
+    com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState[] $VALUES -> c
+    310:310:com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState[] values() -> values
+    310:310:com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState valueOf(java.lang.String) -> valueOf
+    310:310:void <init>(java.lang.String,int) -> <init>
+    310:314:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.drafts.Draft_6455 -> com.analysys.visual.ar:
+    java.util.Random reuseableRandom -> f
+    com.analysys.visual.websocket.extensions.IExtension extension -> g
+    java.util.List knownExtensions -> h
+    com.analysys.visual.websocket.protocols.IProtocol protocol -> i
+    java.util.List knownProtocols -> j
+    com.analysys.visual.websocket.framing.Framedata currentContinuousFrame -> k
+    java.util.List byteBufferList -> l
+    java.nio.ByteBuffer incompleteframe -> m
+    boolean $assertionsDisabled -> e
+    113:114:void <init>() -> <init>
+    137:138:void <init>(java.util.List) -> <init>
+    76:171:void <init>(java.util.List,java.util.List) -> <init>
+    175:200:com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState acceptHandshakeAsServer(com.analysys.visual.websocket.handshake.ClientHandshake) -> a
+    206:243:com.analysys.visual.websocket.drafts.BaseDraft$HandshakeState acceptHandshakeAsClient(com.analysys.visual.websocket.handshake.ClientHandshake,com.analysys.visual.websocket.handshake.ServerHandshake) -> a
+    252:252:com.analysys.visual.websocket.extensions.IExtension getExtension() -> d
+    261:261:java.util.List getKnownExtensions() -> e
+    272:272:com.analysys.visual.websocket.protocols.IProtocol getProtocol() -> f
+    282:282:java.util.List getKnownProtocols() -> g
+    287:318:com.analysys.visual.websocket.handshake.ClientHandshakeBuilder postProcessHandshakeRequestAsClient(com.analysys.visual.websocket.handshake.ClientHandshakeBuilder) -> a
+    324:341:com.analysys.visual.websocket.handshake.HandshakeBuilder postProcessHandshakeResponseAsServer(com.analysys.visual.websocket.handshake.ClientHandshake,com.analysys.visual.websocket.handshake.ServerHandshakeBuilder) -> a
+    346:354:com.analysys.visual.websocket.drafts.BaseDraft copyInstance() -> c
+    359:366:java.nio.ByteBuffer createBinaryFrame(com.analysys.visual.websocket.framing.Framedata) -> a
+    370:408:java.nio.ByteBuffer createByteBufferFromFramedata(com.analysys.visual.websocket.framing.Framedata) -> b
+    413:506:com.analysys.visual.websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer) -> e
+    512:561:java.util.List translateFrame(java.nio.ByteBuffer) -> c
+    593:599:void reset() -> a
+    607:611:java.lang.String getServerTime() -> h
+    622:630:java.lang.String generateFinalKey(java.lang.String) -> a
+    634:639:byte[] toByteArray(long,int) -> a
+    643:656:byte fromOpcode(com.analysys.visual.websocket.framing.Framedata$Opcode) -> a
+    660:676:com.analysys.visual.websocket.framing.Framedata$Opcode toOpcode(byte) -> a
+    682:778:void processFrame(com.analysys.visual.websocket.WebSocketImpl,com.analysys.visual.websocket.framing.Framedata) -> a
+    782:782:com.analysys.visual.websocket.drafts.BaseDraft$CloseHandshakeType getCloseHandshakeType() -> b
+    787:794:java.lang.String toString() -> toString
+    799:811:boolean equals(java.lang.Object) -> equals
+    816:818:int hashCode() -> hashCode
+    830:842:java.nio.ByteBuffer getPayloadFromByteBufferList() -> i
+    71:71:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.exceptions.IncompleteException -> com.analysys.visual.as:
+    int preferredSize -> a
+    47:49:void <init>(int) -> <init>
+    56:56:int getPreferredSize() -> a
+com.analysys.visual.websocket.exceptions.IncompleteHandshakeException -> com.analysys.visual.at:
+    int preferedSize -> a
+    48:50:void <init>(int) -> <init>
+    57:59:void <init>() -> <init>
+    67:67:int getPreferedSize() -> a
+com.analysys.visual.websocket.exceptions.InvalidDataException -> com.analysys.visual.au:
+    int closecode -> a
+    48:50:void <init>(int) -> <init>
+    59:61:void <init>(int,java.lang.String) -> <init>
+    70:72:void <init>(int,java.lang.Throwable) -> <init>
+    92:92:int getCloseCode() -> a
+com.analysys.visual.websocket.exceptions.InvalidFrameException -> com.analysys.visual.av:
+    46:47:void <init>() -> <init>
+    57:58:void <init>(java.lang.String) -> <init>
+com.analysys.visual.websocket.exceptions.InvalidHandshakeException -> com.analysys.visual.aw:
+    46:47:void <init>() -> <init>
+    69:70:void <init>(java.lang.String) -> <init>
+com.analysys.visual.websocket.exceptions.LimitExedeedException -> com.analysys.visual.ax:
+    46:47:void <init>() -> <init>
+    57:58:void <init>(java.lang.String) -> <init>
+com.analysys.visual.websocket.exceptions.NotSendableException -> com.analysys.visual.ay:
+com.analysys.visual.websocket.exceptions.WebsocketNotConnectedException -> com.analysys.visual.az:
+    31:31:void <init>() -> <init>
+com.analysys.visual.websocket.extensions.DefaultExtension -> com.analysys.visual.ba:
+    39:39:void <init>() -> <init>
+    44:44:void decodeFrame(com.analysys.visual.websocket.framing.Framedata) -> a
+    49:49:void encodeFrame(com.analysys.visual.websocket.framing.Framedata) -> b
+    53:53:boolean acceptProvidedExtensionAsServer(java.lang.String) -> a
+    58:58:boolean acceptProvidedExtensionAsClient(java.lang.String) -> b
+    63:68:void isFrameValid(com.analysys.visual.websocket.framing.Framedata) -> c
+    72:72:java.lang.String getProvidedExtensionAsClient() -> a
+    77:77:java.lang.String getProvidedExtensionAsServer() -> b
+    82:82:com.analysys.visual.websocket.extensions.IExtension copyInstance() -> c
+    88:88:void reset() -> d
+    92:92:java.lang.String toString() -> toString
+    97:97:int hashCode() -> hashCode
+    102:108:boolean equals(java.lang.Object) -> equals
+com.analysys.visual.websocket.extensions.IExtension -> com.analysys.visual.bb:
+    void decodeFrame(com.analysys.visual.websocket.framing.Framedata) -> a
+    void encodeFrame(com.analysys.visual.websocket.framing.Framedata) -> b
+    boolean acceptProvidedExtensionAsServer(java.lang.String) -> a
+    boolean acceptProvidedExtensionAsClient(java.lang.String) -> b
+    void isFrameValid(com.analysys.visual.websocket.framing.Framedata) -> c
+    java.lang.String getProvidedExtensionAsClient() -> a
+    java.lang.String getProvidedExtensionAsServer() -> b
+    com.analysys.visual.websocket.extensions.IExtension copyInstance() -> c
+    void reset() -> d
+    java.lang.String toString() -> toString
+com.analysys.visual.websocket.framing.BaseControlFrame -> com.analysys.visual.bc:
+    41:42:void <init>(com.analysys.visual.websocket.framing.Framedata$Opcode) -> <init>
+    46:58:void isValid() -> a
+com.analysys.visual.websocket.framing.BaseDataFrame -> com.analysys.visual.bd:
+    40:41:void <init>(com.analysys.visual.websocket.framing.Framedata$Opcode) -> <init>
+    46:46:void isValid() -> a
+com.analysys.visual.websocket.framing.BaseFrameDataImpl1 -> com.analysys.visual.be:
+    boolean fin -> a
+    com.analysys.visual.websocket.framing.Framedata$Opcode optcode -> b
+    java.nio.ByteBuffer unmaskedpayload -> c
+    boolean transferemasked -> d
+    boolean rsv1 -> e
+    boolean rsv2 -> f
+    boolean rsv3 -> g
+    77:85:void <init>(com.analysys.visual.websocket.framing.Framedata$Opcode) -> <init>
+    94:111:com.analysys.visual.websocket.framing.BaseFrameDataImpl1 get(com.analysys.visual.websocket.framing.Framedata$Opcode) -> a
+    void isValid() -> a
+    124:124:boolean isRSV1() -> b
+    133:134:void setRSV1(boolean) -> a
+    138:138:boolean isRSV2() -> c
+    147:148:void setRSV2(boolean) -> b
+    152:152:boolean isRSV3() -> d
+    161:162:void setRSV3(boolean) -> c
+    166:166:boolean isFin() -> e
+    175:176:void setFin(boolean) -> d
+    180:180:com.analysys.visual.websocket.framing.Framedata$Opcode getOpcode() -> f
+    190:190:java.nio.ByteBuffer getPayloadData() -> g
+    225:226:java.lang.String toString() -> toString
+    235:236:void setPayload(java.nio.ByteBuffer) -> a
+    249:276:boolean equals(java.lang.Object) -> equals
+    282:289:int hashCode() -> hashCode
+com.analysys.visual.websocket.framing.BaseFrameDataImpl1$1 -> com.analysys.visual.be$1:
+    int[] $SwitchMap$com$analysys$visual$websocket$framing$Framedata$Opcode -> a
+    97:97:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.framing.BinaryFrame -> com.analysys.visual.bf:
+    37:38:void <init>() -> <init>
+com.analysys.visual.websocket.framing.CloseFrame -> com.analysys.visual.bg:
+    int code -> a
+    java.lang.String reason -> b
+    182:185:void <init>() -> <init>
+    192:199:void setCode(int) -> a
+    206:211:void setReason(java.lang.String) -> a
+    219:219:int getCloseCode() -> h
+    228:228:java.lang.String getMessage() -> i
+    233:233:java.lang.String toString() -> toString
+    238:255:void isValid() -> a
+    259:290:void setPayload(java.nio.ByteBuffer) -> a
+    296:305:void updatePayload() -> j
+    309:312:java.nio.ByteBuffer getPayloadData() -> g
+com.analysys.visual.websocket.framing.ContinuousFrame -> com.analysys.visual.bh:
+    37:38:void <init>() -> <init>
+com.analysys.visual.websocket.framing.Framedata -> com.analysys.visual.bi:
+    boolean isFin() -> e
+    boolean isRSV1() -> b
+    boolean isRSV2() -> c
+    boolean isRSV3() -> d
+    com.analysys.visual.websocket.framing.Framedata$Opcode getOpcode() -> f
+    java.nio.ByteBuffer getPayloadData() -> g
+com.analysys.visual.websocket.framing.Framedata$Opcode -> com.analysys.visual.bi$a:
+    com.analysys.visual.websocket.framing.Framedata$Opcode CONTINUOUS -> a
+    com.analysys.visual.websocket.framing.Framedata$Opcode TEXT -> b
+    com.analysys.visual.websocket.framing.Framedata$Opcode BINARY -> c
+    com.analysys.visual.websocket.framing.Framedata$Opcode PING -> d
+    com.analysys.visual.websocket.framing.Framedata$Opcode PONG -> e
+    com.analysys.visual.websocket.framing.Framedata$Opcode CLOSING -> f
+    com.analysys.visual.websocket.framing.Framedata$Opcode[] $VALUES -> g
+    87:87:com.analysys.visual.websocket.framing.Framedata$Opcode[] values() -> values
+    87:87:com.analysys.visual.websocket.framing.Framedata$Opcode valueOf(java.lang.String) -> valueOf
+    87:87:void <init>(java.lang.String,int) -> <init>
+    87:91:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.framing.PingFrame -> com.analysys.visual.bj:
+    37:38:void <init>() -> <init>
+com.analysys.visual.websocket.framing.PongFrame -> com.analysys.visual.bk:
+    37:38:void <init>() -> <init>
+    46:48:void <init>(com.analysys.visual.websocket.framing.PingFrame) -> <init>
+com.analysys.visual.websocket.framing.TextFrame -> com.analysys.visual.bl:
+    40:41:void <init>() -> <init>
+    45:50:void isValid() -> a
+com.analysys.visual.websocket.handshake.ClientHandshake -> com.analysys.visual.bm:
+    java.lang.String getResourceDescriptor() -> a
+com.analysys.visual.websocket.handshake.ClientHandshakeBuilder -> com.analysys.visual.bn:
+    void setResourceDescriptor(java.lang.String) -> a
+com.analysys.visual.websocket.handshake.HandshakeBuilder -> com.analysys.visual.bo:
+    void put(java.lang.String,java.lang.String) -> a
+com.analysys.visual.websocket.handshake.HandshakeImpl1Client -> com.analysys.visual.bp:
+    java.lang.String resourceDescriptor -> a
+    31:36:void <init>() -> <init>
+    40:40:java.lang.String getResourceDescriptor() -> a
+    45:49:void setResourceDescriptor(java.lang.String) -> a
+com.analysys.visual.websocket.handshake.HandshakeImpl1Server -> com.analysys.visual.bq:
+    short httpstatus -> a
+    java.lang.String httpstatusmessage -> b
+    31:31:void <init>() -> <init>
+    45:45:java.lang.String getHttpStatusMessage() -> a
+    50:51:void setHttpStatusMessage(java.lang.String) -> a
+    60:61:void setHttpStatus(short) -> a
+com.analysys.visual.websocket.handshake.Handshakedata -> com.analysys.visual.br:
+    java.util.Iterator iterateHttpFields() -> b
+    java.lang.String getFieldValue(java.lang.String) -> b
+    boolean hasFieldValue(java.lang.String) -> c
+    byte[] getContent() -> c
+com.analysys.visual.websocket.handshake.HandshakedataImpl1 -> com.analysys.visual.bs:
+    byte[] content -> a
+    java.util.TreeMap map -> b
+    50:52:void <init>() -> <init>
+    56:56:java.util.Iterator iterateHttpFields() -> b
+    61:65:java.lang.String getFieldValue(java.lang.String) -> b
+    70:70:byte[] getContent() -> c
+    80:81:void put(java.lang.String,java.lang.String) -> a
+    85:85:boolean hasFieldValue(java.lang.String) -> c
+com.analysys.visual.websocket.handshake.ServerHandshake -> com.analysys.visual.bt:
+    java.lang.String getHttpStatusMessage() -> a
+com.analysys.visual.websocket.handshake.ServerHandshakeBuilder -> com.analysys.visual.bu:
+    void setHttpStatus(short) -> a
+    void setHttpStatusMessage(java.lang.String) -> a
+com.analysys.visual.websocket.protocols.IProtocol -> com.analysys.visual.bv:
+    boolean acceptProvidedProtocol(java.lang.String) -> a
+    java.lang.String getProvidedProtocol() -> a
+    com.analysys.visual.websocket.protocols.IProtocol copyInstance() -> b
+    java.lang.String toString() -> toString
+com.analysys.visual.websocket.protocols.Protocol -> com.analysys.visual.bw:
+    java.lang.String providedProtocol -> a
+    45:50:void <init>(java.lang.String) -> <init>
+    54:61:boolean acceptProvidedProtocol(java.lang.String) -> a
+    66:66:java.lang.String getProvidedProtocol() -> a
+    71:71:com.analysys.visual.websocket.protocols.IProtocol copyInstance() -> b
+    76:76:java.lang.String toString() -> toString
+    81:90:boolean equals(java.lang.Object) -> equals
+    95:95:int hashCode() -> hashCode
+com.analysys.visual.websocket.util.Base64 -> com.analysys.visual.bx:
+    byte[] STANDARD_ALPHABET -> b
+    byte[] STANDARD_DECODABET -> c
+    byte[] URL_SAFE_ALPHABET -> d
+    byte[] URL_SAFE_DECODABET -> e
+    byte[] ORDERED_ALPHABET -> f
+    byte[] ORDERED_DECODABET -> g
+    boolean $assertionsDisabled -> a
+    431:432:void <init>() -> <init>
+    442:447:byte[] getAlphabet(int) -> b
+    459:464:byte[] getDecodabet(int) -> c
+    489:490:byte[] encode3to4(byte[],byte[],int,int) -> b
+    521:561:byte[] encode3to4(byte[],int,int,byte[],int,int) -> a
+    579:586:java.lang.String encodeBytes(byte[]) -> a
+    623:630:java.lang.String encodeBytes(byte[],int,int,int) -> a
+    655:764:byte[] encodeBytesToBytes(byte[],int,int,int) -> b
+    811:875:int decode4to3(byte[],int,byte[],int,int) -> b
+    175:175:byte[] access$000(int) -> a
+    175:175:int access$200(byte[],int,byte[],int,int) -> a
+    175:175:byte[] access$300(byte[],byte[],int,int) -> a
+    175:388:void <clinit>() -> <clinit>
+com.analysys.visual.websocket.util.Base64$OutputStream -> com.analysys.visual.bx$a:
+    boolean encode -> a
+    int position -> b
+    byte[] buffer -> c
+    int bufferLength -> d
+    int lineLength -> e
+    boolean breakLines -> f
+    byte[] b4 -> g
+    boolean suspendEncoding -> h
+    int options -> i
+    byte[] decodabet -> j
+    1451:1462:void <init>(java.io.OutputStream,int) -> <init>
+    1481:1519:void write(int) -> write
+    1535:1544:void write(byte[],int,int) -> write
+    1553:1563:void flushBase64() -> a
+    1574:1582:void close() -> close
+com.analysys.visual.websocket.util.ByteBufferUtils -> com.analysys.visual.by:
+    71:71:java.nio.ByteBuffer getEmptyByteBuffer() -> a
+com.analysys.visual.websocket.util.Charsetfunctions -> com.analysys.visual.bz:
+    int[] UTF8D -> b
+    java.nio.charset.CodingErrorAction codingErrorAction -> a
+    88:90:byte[] utf8Bytes(java.lang.String) -> a
+    99:101:byte[] asciiBytes(java.lang.String) -> b
+    111:113:java.lang.String stringAscii(byte[],int,int) -> a
+    122:134:java.lang.String stringUtf8(java.nio.ByteBuffer) -> a
+    148:159:boolean isValidUTF8(java.nio.ByteBuffer,int) -> a
+    169:169:boolean isValidUTF8(java.nio.ByteBuffer) -> b
+    44:74:void <clinit>() -> <clinit>

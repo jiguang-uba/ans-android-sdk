@@ -1,0 +1,122 @@
+if(apidemo_type.toBoolean()){
+    apply plugin: 'com.android.application'
+    apply plugin: 'com.analysys.android.plugin'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        buildConfigField("String", "Build_Type", "\"${Build_Type}\"")
+
+        if(apidemo_type.toBoolean()){
+            applicationId "com.analysys.demo"
+        }
+
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // 个推相关配置
+        manifestPlaceholders = Eval.me(ManifestPlaceholders)
+    }
+
+    if(apidemo_type.toBoolean()) {
+        signingConfigs {
+            release {
+                keyAlias 'apidemo'
+                keyPassword '123456'
+                storeFile file('apidemo')
+                storePassword '123456'
+            }
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles('proguard-rules.pro')
+
+            if(apidemo_type.toBoolean()) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+
+
+
+    dexOptions {
+        preDexLibraries false
+        maxProcessCount 8
+        javaMaxHeapSize "4g"
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        warningsAsErrors false
+        disable "UnusedResources"
+        textOutput "stdout"
+        textReport false
+        disable 'RestrictedApi'
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    if(apidemo_type.toBoolean()){
+        analysysConfig {
+            lambdaEnabled = true
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    //implementation fileTree(include: ['*.aar'], dir: 'libs')
+    if (apidemo_depend.toBoolean()) {
+        api project(':analysys_arkanalysys')
+    } else {
+        api 'cn.com.analysys:analysys-arkanalysys:latest.release'
+    }
+
+    //api project(':analysys-tools')
+
+    //api project(':compatibilityDemo')
+    //implementation(name: 'toolsLibrary', ext: 'aar')
+    //compile files('libs/toolsLibrary-debug.aar')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'androidx.fragment:fragment:1.0.0'
+    compileOnly 'androidx.recyclerview:recyclerview:1.0.0'
+}
+
+// 忽略文档编译错误. 设置编码
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}

@@ -1,0 +1,24 @@
+com.analysys.mpaas.AnalysysH5Plugin -> com.analysys.mpaas.AnalysysH5Plugin:
+    com.analysys.mpaas.AnalysysMpaasHybridObject mHybridObject -> mHybridObject
+    18:18:void <init>() -> <init>
+    21:23:void onPrepare(com.alipay.mobile.h5container.api.H5EventFilter) -> onPrepare
+    29:32:void onRelease() -> onRelease
+    36:45:boolean interceptEvent(com.alipay.mobile.h5container.api.H5Event,com.alipay.mobile.h5container.api.H5BridgeContext) -> interceptEvent
+com.analysys.mpaas.AnalysysMpaas -> com.analysys.mpaas.AnalysysMpaas:
+    13:13:void <init>() -> <init>
+    19:26:void init() -> init
+com.analysys.mpaas.AnalysysMpaasHybridObject -> com.analysys.mpaas.a:
+    java.lang.Object mUCWebView -> a
+    19:21:void <init>(com.alipay.mobile.nebula.webview.APWebView) -> <init>
+    25:27:void clearWebView() -> clearWebView
+    31:31:int getHashCode() -> getHashCode
+    36:36:java.lang.Object getView() -> getView
+    43:43:boolean isHybrid() -> isHybrid
+    50:51:void onVisualDomList(java.lang.String) -> onVisualDomList
+    57:58:void onProperty(java.lang.String) -> onProperty
+    64:65:void AnalysysAgentTrack(java.lang.String,java.lang.String,java.lang.String) -> AnalysysAgentTrack
+    71:72:void analysysHybridCallNative(java.lang.String) -> analysysHybridCallNative
+    78:78:java.lang.String getEventList() -> getEventList
+    85:85:java.lang.String getProperty(java.lang.String) -> getProperty
+com.analysys.mpaas.R -> com.analysys.mpaas.R:
+    10:10:void <init>() -> <init>
